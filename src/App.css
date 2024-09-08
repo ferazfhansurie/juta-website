@@ -132,3 +132,45 @@
 .sponsor-carousel .slick-slide {
   height: auto;
 }
+
+/* Ensure the carousel container has proper sizing */
+.sponsor-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Style the slider track */
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+/* Style individual slides */
+.slick-slide {
+  height: auto;
+  padding: 0 10px;
+}
+
+/* Ensure images within slides are responsive */
+.slick-slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Override any conflicting Tailwind styles */
+.slick-slider {
+  display: block !important;
+}
+
+/* Ensure arrows are visible if you're using them */
+.slick-prev, .slick-next {
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
