@@ -68,12 +68,17 @@ module.exports = {
         slideIn: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
-        }
+        },
+        scrollRight: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         slideIn: "slideIn 0.5s ease-in-out forwards",
+        'scroll-right': 'scrollRight 20s linear infinite',
       },
     },
   },

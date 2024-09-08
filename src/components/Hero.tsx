@@ -22,8 +22,8 @@ export const Hero = () => {
         </p>
         <div className="flex justify-center mb-8">
           <Button size="lg" className="w-full sm:w-auto px-6 py-2 md:px-8 md:py-3 text-base md:text-lg" asChild>
-            <a href="https://web.jutasoftware.co/register" target="_blank" rel="noopener noreferrer">
-              Register Now
+            <a href="https://wa.me/601121677672?text=Hi%20Faeez%20and%20Juta!%20I%20want%20to%20buy" target="_blank" rel="noopener noreferrer">
+              Buy Now
             </a>
           </Button>
         </div>

@@ -16,6 +16,7 @@ import { CaseStudies } from "./components/CaseStudy";
 import { Testimonials } from "./components/Testimonials";
 import { ImageSection } from "./components/Image";
 import "./App.css";
+import { LongLetter } from './components/LongLetter';
 
 function HomePage() {
   return (
@@ -29,6 +30,7 @@ function HomePage() {
       <StepByStepGuide />
       <Comparison />
       <FAQ />
+      <LongLetter />
       <Cta />
     </>
   );

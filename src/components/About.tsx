@@ -58,7 +58,7 @@ export const About = () => {
               <Button 
                 size="lg" 
                 className="w-full text-xl py-6 bg-primary transform hover:scale-105 transition-all duration-300 shadow-lg"
-                onClick={() => window.open("https://web.jutasoftware.co/register", "_blank")}
+                onClick={() => window.open("https://wa.me/601121677672?text=Hi%20Faeez%20and%20Juta!%20I%20want%20to%20buy", "_blank")}
               >
                 Hit the MAGIC Button
               </Button>

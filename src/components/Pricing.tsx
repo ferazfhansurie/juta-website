@@ -18,6 +18,7 @@ interface PricingProps {
   title: string;
   popular: PopularPlanType;
   price: number;
+  originalPrice?: number;
   description: string;
   buttonText: string;
   benefitList: string[];
@@ -44,6 +45,7 @@ const pricingList: PricingProps[] = [
     title: "AI-Powered CRM System",
     popular: PopularPlanType.YES,
     price: 688,
+    originalPrice: 800,
     description: `Ready to turn your WhatsApp chaos into a well-oiled machine? Say hello to your new digital sidekick! Our AI-Powered CRM System is like having a super-smart assistant who never sleeps, never complains, and always remembers to follow up. It's time to kiss goodbye to missed messages, forgotten follow-ups, and that nagging feeling that you're drowning in a sea of chats. With our Team Inbox, you'll be sailing smooth seas, captain! 🚀💬`,
     buttonText: "Start Your Chaos-Free Life",
     benefitList: [
@@ -94,16 +96,19 @@ export const Pricing = () => {
             
               </CardTitle>
               
-              <div>
+              <div className="flex items-baseline">
                 <span className="text-3xl font-bold">RM {pricing.price}</span>
-                <span className="text-muted-foreground"> /month</span>
+                {pricing.originalPrice && (
+                  <span className="ml-2 text-xl text-red-500 line-through">RM {pricing.originalPrice}</span>
+                )}
+                <span className="ml-2 text-muted-foreground"> /month</span>
               </div>
               <CardDescription>{pricing.description}</CardDescription>
             </CardHeader>
 
             <CardContent>
             <Button className="w-full" asChild>
-                <a href="https://web.jutasoftware.co/register" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/601121677672?text=Hi%20Faeez%20and%20Juta!%20I%20want%20to%20buy" target="_blank" rel="noopener noreferrer">
                   {pricing.buttonText}
                 </a>
               </Button>

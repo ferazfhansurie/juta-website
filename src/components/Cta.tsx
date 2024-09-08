@@ -19,7 +19,7 @@ export const Cta = () => {
         <Button 
           size="lg" 
           className="w-full sm:w-auto text-xl py-6 px-8 text-2xl"
-          onClick={() => window.open("https://web.jutasoftware.co/register", "_blank")}
+          onClick={() => window.open("https://wa.me/601121677672?text=Hi%20Faeez%20and%20Juta!%20I%20want%20to%20buy", "_blank")}
         >
           Get Started Now
         </Button>
