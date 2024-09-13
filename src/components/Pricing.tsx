@@ -22,6 +22,7 @@ interface PricingProps {
   description: string;
   buttonText: string;
   benefitList: string[];
+  checkoutLink: string;
 }
 
 const pricingList: PricingProps[] = [
@@ -31,6 +32,7 @@ const pricingList: PricingProps[] = [
     price: 150,
     description: "Get started with our WhatsApp Team Inbox - perfect for teams looking to streamline their communication without the AI bells and whistles.",
     buttonText: "Start Basic Plan",
+    checkoutLink: "https://buy.stripe.com/14k4ho4XH6zX1Mc144",
     benefitList: [
       "3 WhatsApp Connections",
       "Unlimited Messages",
@@ -48,6 +50,7 @@ const pricingList: PricingProps[] = [
     originalPrice: 800,
     description: `Ready to turn your WhatsApp chaos into a well-oiled machine? Say hello to your new digital sidekick! Our AI-Powered CRM System is like having a super-smart assistant who never sleeps, never complains, and always remembers to follow up. It's time to kiss goodbye to missed messages, forgotten follow-ups, and that nagging feeling that you're drowning in a sea of chats. With our Team Inbox, you'll be sailing smooth seas, captain! 🚀💬`,
     buttonText: "Start Your Chaos-Free Life",
+    checkoutLink: "https://buy.stripe.com/cN29BIfCl1fD8aA5kl",
     benefitList: [
       "Unlimited Users (Yep, invite the whole crew!)",
       "Unlimited Messages (Chat till the cows come home)",
@@ -107,8 +110,12 @@ export const Pricing = () => {
             </CardHeader>
 
             <CardContent>
-            <Button className="w-full" asChild>
-                <a href="https://wa.me/601121677672?text=Hi%20Faeez%20and%20Juta!%20I%20want%20to%20buy" target="_blank" rel="noopener noreferrer">
+              <Button className="w-full" asChild>
+                <a 
+                  href={pricing.checkoutLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
                   {pricing.buttonText}
                 </a>
               </Button>

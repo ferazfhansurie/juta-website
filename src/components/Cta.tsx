@@ -1,6 +1,25 @@
 import { Button } from "./ui/button";
+import { useNavigate } from 'react-router-dom';
 
 export const Cta = () => {
+  const navigate = useNavigate();
+
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If the pricing section is not on the current page, navigate to the home page and then scroll
+      navigate('/', { replace: true });
+      setTimeout(() => {
+        const pricingSection = document.getElementById('pricing');
+        if (pricingSection) {
+          pricingSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
+
   return (
     <section
       id="cta"
@@ -19,7 +38,7 @@ export const Cta = () => {
         <Button 
           size="lg" 
           className="w-full sm:w-auto text-xl py-6 px-8 text-2xl"
-          onClick={() => window.open("https://wa.me/601121677672?text=Hi%20Faeez%20and%20Juta!%20I%20want%20to%20buy", "_blank")}
+          onClick={scrollToPricing}
         >
           Get Started Now
         </Button>

@@ -61,9 +61,22 @@ export const Navbar = () => {
     setIsOpen(false);
     if (href.startsWith('/')) {
       navigate(href);
+    } else if (href.startsWith('#')) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     } else {
       window.location.href = href;
     }
+  };
+
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsOpen(false);
   };
 
   return (
@@ -124,20 +137,21 @@ export const Navbar = () => {
               <a
                 key={label}
                 href={href}
-                onClick={() => handleNavigation(href)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavigation(href);
+                }}
                 className="text-sm transition-colors hover:text-primary"
               >
                 {label}
               </a>
             ))}
-            <a
-              rel="noreferrer noopener"
-              href="https://wa.me/601121677672?text=Hi%20Faeez%20and%20Juta!%20I%20want%20to%20buy"
-              target="_blank"
+            <button
+              onClick={scrollToPricing}
               className={`border ${buttonVariants({ variant: "secondary" })}`}
             >
               Buy Now
-            </a>
+            </button>
           </div>
         </NavigationMenuList>
       </NavigationMenu>

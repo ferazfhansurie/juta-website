@@ -2,6 +2,13 @@ import { Button } from "./ui/button";
 import { AnimatedChatBubble } from "./AnimatedChatBubble";
 
 export const Hero = () => {
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="container flex flex-col items-center justify-between py-16 md:py-24 lg:py-40">
       <div className="text-center max-w-2xl mx-auto z-10">
@@ -21,10 +28,12 @@ export const Hero = () => {
           Team Collaboration. One Platform for All Your WhatsApp Conversations
         </p>
         <div className="flex justify-center mb-8">
-          <Button size="lg" className="w-full sm:w-auto px-6 py-2 md:px-8 md:py-3 text-base md:text-lg" asChild>
-            <a href="https://wa.me/601121677672?text=Hi%20Faeez%20and%20Juta!%20I%20want%20to%20buy" target="_blank" rel="noopener noreferrer">
-              Buy Now
-            </a>
+          <Button 
+            size="lg" 
+            className="w-full sm:w-auto px-6 py-2 md:px-8 md:py-3 text-base md:text-lg" 
+            onClick={scrollToPricing}
+          >
+            Buy Now
           </Button>
         </div>
       </div>
