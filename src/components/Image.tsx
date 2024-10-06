@@ -21,7 +21,7 @@ export const ImageSection: React.FC = () => {
         <div className="absolute w-[100%] h-full animate-scroll-right">
           <div className="flex h-full">
             {[...images, ...images].map((img, index) => (
-              <div key={index} className="flex-shrink-0 w-1/3 h-full">
+              <div key={index} className="flex-shrink-0 w-full md:w-1/3 h-full">
                 <img 
                   src={img} 
                   className="w-full h-full object-contain" 

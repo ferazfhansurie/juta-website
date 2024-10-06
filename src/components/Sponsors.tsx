@@ -1,4 +1,3 @@
-
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -22,21 +21,29 @@ function Sponsors() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 5, // Default for desktop
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
     pauseOnHover: true,
+    responsive: [ // Added responsive settings
+      {
+        breakpoint: 768, // Mobile breakpoint
+        settings: {
+          slidesToShow: 1, // Show 1 slide on mobile
+        }
+      }
+    ]
   };
 
   return (
-    <div className="sponsor-carousel">
+    <div className="sponsor-carousel px-4"> {/* Added padding for the carousel */}
       <Slider {...settings}>
         {sponsorImages.map((url, index) => (
           <div key={index} className="px-2">
             <Card 
-              className="h-40 w-64 mx-auto flex items-center justify-center cursor-pointer hover:shadow-md transition-shadow duration-300 bg-slate-500 dark:bg-gray-900"
+              className="h-40 w-full max-w-xs mx-auto flex items-center justify-center cursor-pointer hover:shadow-md transition-shadow duration-300 bg-slate-500 dark:bg-gray-900"
               onClick={() => navigate('/case-studies')}
             >
               <CardContent className="p-4 flex items-center justify-center h-full w-full">
