@@ -12,7 +12,7 @@ interface Message {
 }
 
 export const ChatbotWidget: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     { text: "hi can ask me anything ya", isUser: false, createdAt: new Date().toISOString() }
   ]);

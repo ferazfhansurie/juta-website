@@ -1,6 +1,6 @@
 // src/components/TokenCalculator.tsx
-import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useState } from 'react';
+import { Card, CardContent, CardHeader, } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export const TokenCalculator = () => {
