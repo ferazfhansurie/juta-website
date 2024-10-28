@@ -48,7 +48,7 @@ const pricingList: PricingProps[] = [
     price: 168,
     description: "Enterprise-grade solution with 500 free messages monthly. Additional messages at RM10 per 100 messages.",
     buttonText: "Start Enterprise Plan",
-    checkoutLink: "https://wa.link/your-link-here", // You'll need to update this
+    checkoutLink: "https://wa.link/72rm3x", // You'll need to update this
     benefitList: [
       "500 Free Messages Monthly",
       "Additional Messages: RM10/100 msgs",
