@@ -41,19 +41,21 @@ const pricingList: PricingProps[] = [
       "View & Update Existing Conversations",
     ],
   },
+
   {
-    title: "Pay Per Use AI + WhatsApp Blaster + CRM",
+    title: "Enterprise Plan",
     popular: PopularPlanType.NO,
-    price: 88,
-    description: "Access AI, WhatsApp Blaster, and CRM with limited users and features. Build your own AI and enjoy limited automations.",
-    buttonText: "Start Pay Per Use Plan",
-    checkoutLink: "https://wa.link/w8q7y0",
+    price: 168,
+    description: "Enterprise-grade solution with 500 free messages monthly. Additional messages at RM10 per 100 messages.",
+    buttonText: "Start Enterprise Plan",
+    checkoutLink: "https://wa.link/your-link-here", // You'll need to update this
     benefitList: [
+      "500 Free Messages Monthly",
+      "Additional Messages: RM10/100 msgs",
       "Limited Users",
       "1 WhatsApp Connection",
       "Build Your Own AI",
       "Limited Automations",
-      "Pay Per Use: 0.003 Ringgit/1k tokens",
       "Scan QR Code Integration",
       "View & Update Existing Conversations",
     ],

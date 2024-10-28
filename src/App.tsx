@@ -17,7 +17,7 @@ import { Testimonials } from "./components/Testimonials";
 import { ImageSection } from "./components/Image";
 import "./App.css";
 
-import { TokenCalculator } from './components/TokenCalculator';
+
 
 function HomePage() {
   return (
@@ -26,7 +26,7 @@ function HomePage() {
       <ImageSection />
       <Testimonials />
       <Pricing />
-      <TokenCalculator />
+     
       <SponsorsComponent />
       <About />
       <StepByStepGuide />
