@@ -63,7 +63,7 @@ const pricingList: PricingProps[] = [
   {
     title: "Unlimited Plan with Custom Solutions",
     popular: PopularPlanType.YES,
-    price: 888,
+    price: 688,
     description: "Enjoy everything unlimited with up to 3 numbers connection. Get our service for complete setup and custom solutions in 10 days.",
     buttonText: "Start Unlimited Plan",
     checkoutLink: "https://wa.link/ng0obn",
