@@ -32,8 +32,9 @@ const pricingList: PricingProps[] = [
     price: 50,
     description: "Get started with our WhatsApp Blaster for a single number - perfect for small-scale campaigns.",
     buttonText: "Start Blaster Plan",
-    checkoutLink: "https://wa.link/ah1gmf",
+    checkoutLink: "https://web.jutasoftware.co/register",
     benefitList: [
+      "7 Days Free Trial",
       "1 WhatsApp Connection",
       "Unlimited Messages",
       "Basic Blaster Features",
@@ -43,13 +44,14 @@ const pricingList: PricingProps[] = [
   },
 
   {
-    title: "Enterprise Plan",
+    title: "Standard AI Plan",
     popular: PopularPlanType.NO,
     price: 168,
     description: "Enterprise-grade solution with 500 free messages monthly. Additional messages at RM10 per 100 messages.",
-    buttonText: "Start Enterprise Plan",
-    checkoutLink: "https://wa.link/72rm3x", // You'll need to update this
+    buttonText: "Start Standard AI Plan",
+    checkoutLink: "https://web.jutasoftware.co/register", // You'll need to update this
     benefitList: [
+      "7 Days Free Trial",
       "500 Free Messages Monthly",
       "Additional Messages: RM10/100 msgs",
       "Limited Users",
