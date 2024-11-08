@@ -70,6 +70,7 @@ const pricingList: PricingProps[] = [
     buttonText: "Start Unlimited Plan",
     checkoutLink: "https://wa.link/ng0obn",
     benefitList: [
+      "7 Days Free Trial",
       "Unlimited Users",
       "Unlimited Messages",
       "Unlimited Follow-Up",

@@ -33,7 +33,7 @@ export const Hero = () => {
             className="w-full sm:w-auto px-6 py-2 md:px-8 md:py-3 text-base md:text-lg" 
             onClick={scrollToPricing}
           >
-            Buy Now
+            Start Free Trial
           </Button>
         </div>
       </div>

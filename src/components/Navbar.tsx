@@ -150,7 +150,7 @@ export const Navbar = () => {
               onClick={scrollToPricing}
               className={`border ${buttonVariants({ variant: "secondary" })}`}
             >
-              Buy Now
+              Start Free Trial
             </button>
           </div>
         </NavigationMenuList>

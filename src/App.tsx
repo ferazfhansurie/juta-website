@@ -15,6 +15,7 @@ import { ChatbotWidget } from "./components/ChatbotWidget";
 import { CaseStudies } from "./components/CaseStudy";
 import { Testimonials } from "./components/Testimonials";
 import { ImageSection } from "./components/Image";
+import { VideoSalesLetter } from "./components/VideoSalesLetter";
 import "./App.css";
 
 
@@ -23,6 +24,7 @@ function HomePage() {
   return (
     <>
       <Hero />
+      <VideoSalesLetter />
       <ImageSection />
       <Testimonials />
       <Pricing />
