@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Card, CardContent } from "./ui/card";
-import { Play, Pause } from 'lucide-react';
+import { Play,} from 'lucide-react';
 
 export const VideoSalesLetter: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
