@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import pilot from "../assets/juta-team.png";
-import logo from "../assets/logo.png";
+
+import logo2 from "../assets/logo2.png";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 
@@ -38,9 +39,9 @@ export const About = () => {
           <div className="flex flex-col-reverse md:flex-row gap-8 md:gap-12">
             <div className="flex flex-col items-center">
               <img
-                src={logo}
+                src={logo2}
                 alt="Juta Teknologi Logo"
-                className="w-32 h-auto mt-4 mb-8"
+                className="w-100 h-auto mt-4 mb-8"
               />
               <div className="relative group mb-4">
                 <img
