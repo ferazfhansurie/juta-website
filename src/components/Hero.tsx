@@ -1,11 +1,15 @@
 import { Button } from "./ui/button";
 import { AnimatedChatBubble } from "./AnimatedChatBubble";
+import { pixelEvent } from '../utils/pixel';
 
 export const Hero = () => {
   const scrollToPricing = () => {
     const pricingSection = document.getElementById('pricing');
     if (pricingSection) {
       pricingSection.scrollIntoView({ behavior: 'smooth' });
+      pixelEvent('InitiateCheckout', {
+        content_name: 'Free Trial Button - Hero Section'
+      });
     }
   };
 

@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "./ui/card"
 import { Input } from "./ui/input";
 import { MessageCircle, X, Send } from 'lucide-react';
 import axios from 'axios';
+import { pixelEvent } from '../utils/pixel';
 
 interface Message {
   text: string;
@@ -61,6 +62,10 @@ export const ChatbotWidget: React.FC = () => {
   const handleSendMessage = () => {
     if (inputMessage.trim() === "") return;
     sendMessageToAssistant(inputMessage);
+    pixelEvent('Contact', {
+      content_category: 'Chat',
+      content_name: 'Chatbot Interaction'
+    });
   };
 
   return (

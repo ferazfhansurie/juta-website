@@ -11,10 +11,23 @@
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '617812713471930'); // Replace YOUR_PIXEL_ID with your actual Pixel ID
+      
+      // Add debug mode
+      fbq('init', '617812713471930', {
+        debug: true
+      });
       fbq('track', 'PageView');
+      
+      // Add console log to verify the code is running
+      console.log('Meta Pixel initialized');
     </script>
     <!-- End Meta Pixel Code -->
+
+    <!-- Move noscript here, right after the script -->
+    <noscript>
+      <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=617812713471930&ev=PageView&noscript=1" />
+    </noscript>
 
     <meta charset="UTF-8" />
     <link
@@ -82,11 +95,6 @@
     />
   </head>
   <body>
-    <!-- Meta Pixel Code (noscript) -->
-    <noscript>
-      <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=617812713471930&ev=PageView&noscript=1" />
-    </noscript>
     <div id="root"></div>
     <script
       type="module"

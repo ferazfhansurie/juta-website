@@ -1,9 +1,14 @@
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import { pixelEvent } from '../utils/pixel';
 
 export const Newsletter = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    pixelEvent('Lead', {
+      content_name: 'Newsletter Subscription',
+      content_category: 'Newsletter'
+    });
     console.log("Subscribed!");
   };
 

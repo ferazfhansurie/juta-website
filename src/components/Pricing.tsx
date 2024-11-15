@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import { pixelEvent } from '../utils/pixel';
 
 enum PopularPlanType {
   NO = 0,
@@ -92,6 +93,15 @@ const pricingList: PricingProps[] = [
 ];
 
 export const Pricing = () => {
+  const handlePricingClick = (planName: string, price: number) => {
+    pixelEvent('ViewContent', {
+      content_type: 'product',
+      content_name: planName,
+      currency: 'MYR',
+      value: price
+    });
+  };
+
   return (
     <section
       id="pricing"
@@ -136,6 +146,7 @@ export const Pricing = () => {
                   href={pricing.checkoutLink} 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  onClick={() => handlePricingClick(pricing.title, pricing.price)}
                 >
                   {pricing.buttonText}
                 </a>
