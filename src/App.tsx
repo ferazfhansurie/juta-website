@@ -27,9 +27,10 @@ function HomePage() {
       <Hero />
       <VideoSalesLetter />
       <ImageSection />
-      <Testimonials />
       <Features />
       <Pricing />
+      <Testimonials />
+      
      
       <SponsorsComponent />
       <About />
