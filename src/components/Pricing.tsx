@@ -66,8 +66,7 @@ const pricingList: PricingProps[] = [
     buttonText: "Start 7 Days Free Trial",
     checkoutLink: "https://web.jutasoftware.co/register", // You'll need to update this
     benefitList: [
-      "Everything In Team Inbox Plan Included",
-      "Done For You AI Setup & Maintenance",
+      "Everything In Team Inbox Plan",
       "Chat-GPT 4.0 Answers",
       "Automated Blasting",
       "Automated Follow-Up",
@@ -75,11 +74,12 @@ const pricingList: PricingProps[] = [
       "Automated Tagging",
       "Automated Assign",
       "Automated Notification",
+      "Full Setup & Maintenance",
       "24/7 Support",
     ],
     addOns: [
       {
-        name: "Google Sheets/Excel Integration",
+        name: "Google Sheets Integration",
         price: 150,
         description: "One-time payment"
       },
@@ -103,10 +103,10 @@ const pricingList: PricingProps[] = [
     buttonText: "Contact Us",
     checkoutLink: "https://wa.link/ng0obn",
     benefitList: [
-      "Everything In Standard AI Plan Included",
+      "Everything In Standard AI Plan",
       "Unlimited AI Responses",
       "Up to 3 Numbers Connection",
-      "Custom Integration Included",
+      "Custom Integration",
     ],
     addOns: [],
   },

@@ -79,7 +79,7 @@ const FeatureCard: React.FC<{ feature: Feature; index: number }> = ({ feature, i
   <div className="relative flex items-center w-full py-4">
     <div className={`w-full grid grid-cols-[80px_1fr] lg:grid-cols-[1fr_2fr_2fr_1fr] gap-4 lg:gap-20 relative ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
       <div className={`lg:col-span-2 ${index % 2 === 0 ? 'lg:col-start-1' : 'lg:col-start-3'} col-start-2`}>
-        <Card className="relative z-10 bg-background p-6 h-auto inline-block min-w-[200px] lg:min-w-[300px]">
+        <Card className="relative z-10 bg-background dark:bg-[#121212] p-6 h-auto inline-block min-w-[200px] lg:min-w-[300px]">
           <CardHeader className="p-0">
             <CardTitle className="text-2xl mb-2 whitespace-normal">{feature.title}</CardTitle>
             <CardDescription className="text-lg whitespace-normal">{feature.description}</CardDescription>
