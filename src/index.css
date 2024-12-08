@@ -82,3 +82,28 @@ html {
     transform: translateY(0);
   }
 }
+
+.feature-badge {
+  opacity: 0;
+  transform: translate(-50%, calc(-50% + 1rem));
+  transition: all 0.5s ease-out;
+}
+
+.badge-active {
+  opacity: 1 !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.scroll-indicator {
+  transition: transform 0.1s ease-out;
+  position: fixed;
+  top: 50vh;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background-color: hsl(var(--muted-foreground) / 0.2);
+}

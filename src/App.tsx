@@ -16,6 +16,7 @@ import { CaseStudies } from "./components/CaseStudy";
 import { Testimonials } from "./components/Testimonials";
 import { ImageSection } from "./components/Image";
 import { VideoSalesLetter } from "./components/VideoSalesLetter";
+import { Features } from "./components/Features";
 import "./App.css";
 
 
@@ -27,6 +28,7 @@ function HomePage() {
       <VideoSalesLetter />
       <ImageSection />
       <Testimonials />
+      <Features />
       <Pricing />
      
       <SponsorsComponent />

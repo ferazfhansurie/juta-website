@@ -121,16 +121,16 @@ export const Navbar = () => {
           </div>
 
           {/* Center: Logo */}
-          <NavigationMenuItem className="absolute left-1/2 transform -translate-x-1/2">
+          <NavigationMenuItem className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
             <a
               rel="noreferrer noopener"
               href="/"
-              className="font-bold text-xl flex items-center"
+              className="font-bold text-xl flex items-center justify-center"
             >
-             <img 
+              <img 
                 src={logo} 
                 alt="Logo" 
-                className="w-[150px] h-[150px]"          // Option 2: Using Tailwind arbitrary values
+                className="w-[130px] h-[130px] -ml-[8px]"
               />
             </a>
           </NavigationMenuItem>
