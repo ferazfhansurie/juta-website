@@ -24,43 +24,76 @@ interface PricingProps {
   buttonText: string;
   benefitList: string[];
   checkoutLink: string;
+  addOns: {
+    name: string;
+    price: number;
+    description: string;
+  }[];
 }
 
 const pricingList: PricingProps[] = [
   {
-    title: "WhatsApp Blaster",
+    title: "Team Inbox",
     popular: PopularPlanType.NO,
     price: 50,
-    description: "Get started with our WhatsApp Blaster for a single number - perfect for small-scale campaigns.",
-    buttonText: "Start Blaster Plan",
+    description: "Get started with our Team Inbox for a single number - perfect for small-scale collaboration.",
+    buttonText: "Start Team Inbox",
     checkoutLink: "https://web.jutasoftware.co/register",
     benefitList: [
       "7 Days Free Trial",
       "1 WhatsApp Connection",
-      "Unlimited Messages",
-      "Basic Blaster Features",
       "Scan QR Code Integration",
+      "Unlimited Users",
+      "Unlimited Messages",
+      "Unlimited Blast Messages",
+      "Unlimited Follow Up",
+      "Assign Users & Tag Contacts",
+      "Export & Import Existing Contacts",
       "View & Update Existing Conversations",
+      "Multi-User Number Management",
+      "Centralized Multi-Number Control",
+      "Mobile App Access",
+      "Desktop Access",
     ],
+    addOns: [],
   },
 
   {
     title: "Standard AI Plan",
     popular: PopularPlanType.NO,
-    price: 168,
-    description: "Enterprise-grade solution with 500 free messages monthly. Additional messages at RM10 per 100 messages.",
+    price: 218,
+    description: "Enterprise-grade solution with 500 free AI responses monthly. Additional responses at RM10 per 100 responses.",
     buttonText: "Start Standard AI Plan",
     checkoutLink: "https://web.jutasoftware.co/register", // You'll need to update this
     benefitList: [
       "7 Days Free Trial",
-      "500 Free Messages Monthly",
-      "Additional Messages: RM10/100 msgs",
-      "Limited Users",
-      "1 WhatsApp Connection",
-      "Build Your Own AI",
-      "Limited Automations",
-      "Scan QR Code Integration",
-      "View & Update Existing Conversations",
+      "Team Inbox Plan Included",
+      "Done For You AI Setup & Maintenance",
+      "Google Calendar Integration",
+      "Chat-GPT 4.0 Answers (Text, Voice, Images & Documents)",
+      "Automated Blasting",
+      "Automated Follow-Up",
+      "Automated Booking System",
+      "Automated Tagging",
+      "Automated Assign",
+      "24/7 Support",
+    ],
+    addOns: [
+      {
+        name: "Google Sheets/Excel Integration",
+        price: 150,
+        description: "One-time payment"
+      },
+      {
+        name: "Website Integration",
+        price: 250,
+        description: "One-time payment"
+      },
+      {
+        name: "Other CRM Integration",
+        price: 500,
+        description: "One-time payment"
+      }
     ],
   },
   {
@@ -71,24 +104,13 @@ const pricingList: PricingProps[] = [
     buttonText: "Start Unlimited Plan",
     checkoutLink: "https://wa.link/ng0obn",
     benefitList: [
-      "7 Days Free Trial",
-      "Unlimited Users",
-      "Unlimited Messages",
-      "Unlimited Follow-Up",
-      "Done For You Integration",
+      "Standard AI Plan Included",
+      "Unlimited AI Responses",
       "Up to 3 Numbers Connection",
-      "Custom Solutions in 10 Days",
-      "Personal WhatsApp Connection",
-      "Scan QR Code Integration",
-      "Unlimited Blast Messages",
-      "Export & Import Existing Contacts",
-      "View & Update Existing Conversations",
-      "Automated Follow-Up",
-      "Chat-GPT 4.0 Answers",
-      "Automated Booking System",
-      "Multi-User Number Management",
-      "Centralized Multi-Number Control",
+      "Done For You Setup & Maintenance",
+      "Custom Integration To Existing Systems (Google Excel & Other CRM System)",
     ],
+    addOns: [],
   },
 ];
 
