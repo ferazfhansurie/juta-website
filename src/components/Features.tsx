@@ -22,10 +22,6 @@ const features: Feature[] = [
     description: "Store and manage all your customer contacts",
   },
   {
-    title: "Multi-Number Management",
-    description: "Manage multiple WhatsApp numbers in one place",
-  },
-  {
     title: "Unlimited Blast Messages",
     description: "Send bulk messages to multiple contacts",
   },
@@ -60,10 +56,6 @@ const features: Feature[] = [
 {
   title: "Custom Integrations",
     description: "Connect with your favorite tools and platforms",
-  },
-  {
-    title: "Export & Import Contacts",
-    description: "Easily move your contact lists in and out",
   },
   {
     title: "Mobile App Access",
