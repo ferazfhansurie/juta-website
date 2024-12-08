@@ -70,7 +70,7 @@ const pricingList: PricingProps[] = [
       "Team Inbox Plan Included",
       "Done For You AI Setup & Maintenance",
       "Google Calendar Integration",
-      "Chat-GPT 4.0 Answers (Text, Voice, Images & Documents)",
+      "Chat-GPT 4.0 Answers /n (Text, Voice, Images & Documents)",
       "Automated Blasting",
       "Automated Follow-Up",
       "Automated Booking System",
@@ -188,6 +188,24 @@ export const Pricing = () => {
                     <h3 className="ml-2">{benefit}</h3>
                   </span>
                 ))}
+
+                {/* Add-ons section */}
+                {pricing.addOns.length > 0 && (
+                  <>
+                    <div className="mt-6 pt-6 border-t">
+                      <h3 className="font-semibold mb-4">Available Add-ons:</h3>
+                      {pricing.addOns.map((addon) => (
+                        <div key={addon.name} className="mb-3">
+                          <div className="flex justify-between">
+                            <span className="font-medium">{addon.name}</span>
+                            <span>RM {addon.price}</span>
+                          </div>
+                          <p className="text-sm text-muted-foreground">{addon.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
               </div>
             </CardFooter>
           </Card>
