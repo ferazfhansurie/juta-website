@@ -52,7 +52,13 @@ const pricingList: PricingProps[] = [
       "Mobile App Access",
       "Desktop Access",
     ],
-    addOns: [],
+    addOns: [
+      {
+        name: "1 Additional WhatsApp Connection",
+        price: 50,
+        description: "Monthly payment"
+      },
+    ],
   },
 
   {
@@ -63,7 +69,7 @@ const pricingList: PricingProps[] = [
     buttonText: "Start 7 Days Free Trial",
     checkoutLink: "https://web.jutasoftware.co/register", // You'll need to update this
     benefitList: [
-      "Everything In Team Inbox Plan",
+      "Team Inbox Plan Included",
       "Chat-GPT 4.0 Workflows",
       "AI Prompt Builder",
       "Automated Follow-Up",
@@ -94,14 +100,14 @@ const pricingList: PricingProps[] = [
     ],
   },
   {
-    title: "Unlimited Plan with Custom Solutions",
+    title: "Unlimited AI Plan",
     popular: PopularPlanType.YES,
     price: 688,
     description: "Enjoy everything unlimited with up to 3 numbers connection. Get our service for unlimited AI responses and custom solutions.",
     buttonText: "Contact Us",
     checkoutLink: "https://wa.link/ng0obn",
     benefitList: [
-      "Everything In Standard AI Plan",
+      "Standard AI Plan Included",
       "Unlimited AI Responses",
       "Up to 3 Numbers Connection",
       "Custom Integration",
@@ -178,10 +184,16 @@ export const Pricing = () => {
                 {pricing.benefitList.map((benefit: string) => (
                   <span
                     key={benefit}
-                    className="flex"
+                    className="flex items-center"
                   >
-                    <Check className="text-green-500" />{" "}
-                    <h3 className="ml-2">{benefit}</h3>
+                    <Check className="text-green-500 mr-2" />
+                    <h3 className={
+                      benefit.startsWith("Standard AI Plan") || benefit.startsWith("Team Inbox Plan")
+                        ? "bg-gradient-to-r from-blue-500/80 to-purple-500/80 p-2 rounded-lg text-white flex-1" 
+                        : "ml-2"
+                    }>
+                      {benefit}
+                    </h3>
                   </span>
                 ))}
 
@@ -192,11 +204,11 @@ export const Pricing = () => {
                       <h3 className="font-semibold mb-4">Available Add-ons:</h3>
                       {pricing.addOns.map((addon) => (
                         <div key={addon.name} className="mb-3">
-                          <div className="flex justify-between">
-                            <span className="font-medium">{addon.name}</span>
+                          <div>{addon.name}</div>
+                          <div className="flex items-center gap-2">
                             <span>RM {addon.price}</span>
+                            <span className="text-sm text-muted-foreground">{addon.description}</span>
                           </div>
-                          <p className="text-sm text-muted-foreground">{addon.description}</p>
                         </div>
                       ))}
                     </div>
