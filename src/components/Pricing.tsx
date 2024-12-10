@@ -112,7 +112,13 @@ const pricingList: PricingProps[] = [
       "Up to 3 Numbers Connection",
       "Custom Integration",
     ],
-    addOns: [],
+    addOns: [
+      {
+        name: "Custom Automations",
+        price: 1500,
+        description: "Per 1 day of work (8 hours)"
+      },
+    ],
   },
 ];
 
