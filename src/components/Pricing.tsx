@@ -93,10 +93,15 @@ const pricingList: PricingProps[] = [
         description: "One-time payment"
       },
       {
-        name: "Other CRM Integration",
+        name: "Other System Integration",
         price: 500,
         description: "One-time payment"
-      }
+      },
+      {
+        name: "Custom Automations",
+        price: 1500,
+        description: "Per 1 day of work (24 hours)"
+      },
     ],
   },
   {
@@ -109,15 +114,11 @@ const pricingList: PricingProps[] = [
     benefitList: [
       "Standard AI Plan Included",
       "Unlimited AI Responses",
-      "Up to 3 Numbers Connection",
+      "Up to 3 WhatsApp Connections",
       "Custom Integration",
     ],
     addOns: [
-      {
-        name: "Custom Automations",
-        price: 1500,
-        description: "Per 1 day of work (8 hours)"
-      },
+      
     ],
   },
 ];
