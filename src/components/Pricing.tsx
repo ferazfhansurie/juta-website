@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { pixelEvent } from '../utils/pixel';
+import { useState, useEffect } from 'react';
 
 enum PopularPlanType {
   NO = 0,
@@ -123,7 +124,32 @@ const pricingList: PricingProps[] = [
   },
 ];
 
+const currencySymbols: Record<string, string> = {
+  MY: 'RM',
+  SG: 'SGD',
+  ID: 'IDR',
+  US: 'USD',
+  // Add more as needed
+};
+
 export const Pricing = () => {
+  const [currencySymbol, setCurrencySymbol] = useState('RM');
+
+  useEffect(() => {
+    const detectCountry = async () => {
+      try {
+        const response = await fetch('https://ipapi.co/json/');
+        const data = await response.json();
+        const countryCode = data.country_code;
+        console.log(countryCode);
+        setCurrencySymbol(currencySymbols[countryCode] || 'RM');
+      } catch (error) {
+        console.error('Error fetching location:', error);
+      }
+    };
+    detectCountry();
+  }, []);
+
   const handlePricingClick = (planName: string, price: number) => {
     pixelEvent('ViewContent', {
       content_type: 'product',
@@ -162,9 +188,9 @@ export const Pricing = () => {
               </CardTitle>
               
               <div className="flex items-baseline">
-                <span className="text-3xl font-bold">RM {pricing.price}</span>
+                <span className="text-3xl font-bold">{currencySymbol} {pricing.price}</span>
                 {pricing.originalPrice && (
-                  <span className="ml-2 text-xl text-red-500 line-through">RM {pricing.originalPrice}</span>
+                  <span className="ml-2 text-xl text-red-500 line-through">{currencySymbol} {pricing.originalPrice}</span>
                 )}
                 <span className="ml-2 text-muted-foreground"> /month</span>
               </div>
