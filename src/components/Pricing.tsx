@@ -124,9 +124,6 @@ const pricingList: PricingProps[] = [
   },
 ];
 
-const currencySymbols: Record<string, string> = {
-  MY: 'RM',
-};
 
 export const Pricing = () => {
   const [currencySymbol, setCurrencySymbol] = useState('RM');
