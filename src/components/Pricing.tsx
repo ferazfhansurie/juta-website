@@ -126,10 +126,6 @@ const pricingList: PricingProps[] = [
 
 const currencySymbols: Record<string, string> = {
   MY: 'RM',
-  SG: 'SGD',
-  ID: 'IDR',
-  US: 'USD',
-  // Add more as needed
 };
 
 export const Pricing = () => {
@@ -141,10 +137,10 @@ export const Pricing = () => {
         const response = await fetch('https://ipapi.co/json/');
         const data = await response.json();
         const countryCode = data.country_code;
-        console.log(countryCode);
-        setCurrencySymbol(currencySymbols[countryCode] || 'RM');
+        setCurrencySymbol(countryCode === 'MY' ? 'RM' : 'USD');
       } catch (error) {
         console.error('Error fetching location:', error);
+        setCurrencySymbol('USD');
       }
     };
     detectCountry();
