@@ -29,7 +29,7 @@ export const About = () => {
       className="container py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold mb-4">
-        <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
           Why Choose
         </span>{" "}
         Juta Teknologi
@@ -49,7 +49,7 @@ export const About = () => {
                   alt="Support Team"
                   className="w-[500px] object-contain rounded-lg transition-all duration-300 group-hover:scale-105 z-10 relative"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-700 rounded-lg blur opacity-75 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
               </div>
             </div>
             <div className="flex flex-col justify-between">

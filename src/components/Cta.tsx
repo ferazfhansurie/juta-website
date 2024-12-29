@@ -28,7 +28,7 @@ export const Cta = () => {
       <div className="container text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-8 max-w-2xl mx-auto">
           Ready to Revolutionize Your
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
             {" "}
             WhatsApp Business{" "}
           </span>

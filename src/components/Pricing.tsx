@@ -186,7 +186,7 @@ export const Pricing = () => {
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center pb-8">
         Our{' '}
-        <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
            Offers
         </span>
       </h2>
@@ -225,7 +225,7 @@ export const Pricing = () => {
 
               <CardContent>
                 <div className="flex flex-col gap-2">
-                  <Button className="w-full" asChild>
+                  <Button className="w-full glow-button" asChild>
                     <a 
                       href={pricing.checkoutLink} 
                       target="_blank" 
@@ -239,7 +239,7 @@ export const Pricing = () => {
                     {[1, 3, 6, 12].map((duration) => (
                       <button
                         key={duration}
-                        className={`flex-1 px-3 py-1 rounded ${contractDurations[pricing.title] === duration ? 'bg-gray-400 text-black dark:bg-gray-600 dark:text-white' : 'text-black dark:text-white'}`}
+                        className={`flex-1 px-3 py-1 rounded glow-button ${contractDurations[pricing.title] === duration ? 'bg-gray-400 text-black dark:bg-gray-600 dark:text-white' : 'text-black dark:text-white'}`}
                         onClick={() => handleDurationChange(pricing.title, duration)}
                         style={{ whiteSpace: 'nowrap', border: 'none', fontSize: '0.875rem', lineHeight: '1.25rem' }}
                       >
@@ -262,7 +262,7 @@ export const Pricing = () => {
                       <Check className="text-green-500 mr-2" />
                       <h3 className={
                         benefit.startsWith("Standard AI Plan") || benefit.startsWith("Team Inbox Plan")
-                          ? "bg-gradient-to-r from-blue-500/80 to-purple-500/80 p-2 rounded-lg text-white flex-1" 
+                          ? "bg-gradient-to-r from-blue-800/80 to-blue-400/80 p-2 rounded-lg text-white flex-1" 
                           : "ml-2"
                       }>
                         {benefit}

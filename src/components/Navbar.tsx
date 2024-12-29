@@ -51,6 +51,10 @@ const routeList: RouteProps[] = [
     href: "/case-studies",
     label: "Case Studies",
   },
+  {
+    href: "/policy",
+    label: "Privacy Policy",
+  },
 ];
 
 export const Navbar = () => {

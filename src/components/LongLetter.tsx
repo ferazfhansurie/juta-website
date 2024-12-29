@@ -6,7 +6,7 @@ export const LongLetter: React.FC = () => {
     <section className="container py-24 sm:py-32">
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
         A Message to{' '}
-        <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
           Business Owners
         </span>
       </h2>

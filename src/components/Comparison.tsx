@@ -20,7 +20,7 @@ export const Comparison: React.FC = () => {
   return (
     <section id='compare' className="container py-24 sm:py-32">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">
-        <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
           Comparison
         </span>
       </h2>

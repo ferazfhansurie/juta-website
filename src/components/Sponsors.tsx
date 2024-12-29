@@ -66,7 +66,7 @@ export const SponsorsComponent = () => {
       className="container pt-24 sm:py-32"
     >
       <h2 className="text-center text-2xl lg:text-4xl font-bold mb-8 text-primary dark:text-white">
-        <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
           Trusted
         </span>{' '}
         By Businesses in Malaysia by Malaysians 🇲🇾 

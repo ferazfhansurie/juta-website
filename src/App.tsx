@@ -17,6 +17,7 @@ import { Testimonials } from "./components/Testimonials";
 import { ImageSection } from "./components/Image";
 import { VideoSalesLetter } from "./components/VideoSalesLetter";
 import { Features } from "./components/Features";
+import { Policy } from './components/Policy';
 import "./App.css";
 
 
@@ -50,6 +51,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/policy" Component={Policy} />
       </Routes>
       <Footer />
       <ScrollToTop />

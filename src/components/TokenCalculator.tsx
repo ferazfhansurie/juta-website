@@ -21,7 +21,7 @@ export const TokenCalculator = () => {
     <section className="container py-24 sm:py-32">
       <div className="text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
             AI Message Cost 
           </span>{" "}
           Calculator

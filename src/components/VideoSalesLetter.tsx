@@ -19,7 +19,7 @@ export const VideoSalesLetter: React.FC = () => {
     <section className="container py-12 sm:py-16">
        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">
             Watch How to start{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
               Your Free Trial
             </span>
           </h2>

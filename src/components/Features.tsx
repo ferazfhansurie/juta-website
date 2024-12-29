@@ -10,6 +10,10 @@ interface Feature {
 
 const features: Feature[] = [
   {
+    title: "AI Prompt Builder",
+    description: "Automated building agent process by talking to an AI",
+  },
+  {
     title: "QR WhatsApp Connection",
     description: "Connect your WhatsApp number with QR code scanning",
   },
@@ -24,6 +28,10 @@ const features: Feature[] = [
   {
     title: "Unlimited Blast Messages",
     description: "Send bulk messages to multiple contacts",
+  },
+  {
+    title: "Automated Booking",
+    description: "Set up automated appointment booking",
   },
   {
     title: "Automated Follow Ups",
@@ -138,7 +146,7 @@ export const Features: React.FC = () => {
     <section id="features" className="container py-24 sm:py-32">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
         Our{' '}
-        <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
           Features
         </span>
       </h2>
@@ -150,7 +158,7 @@ export const Features: React.FC = () => {
         {/* Timeline line with gradient overlay */}
         <div className="timeline-line absolute left-[40px] lg:left-1/2 top-0 w-[2px] h-full bg-muted-foreground/20">
           <div 
-            className="absolute left-0 top-0 w-full bg-gradient-to-b from-blue-500 via-indigo-500 to-purple-500 transition-all duration-200"
+            className="absolute left-0 top-0 w-full bg-gradient-to-b from-blue-300 via-indigo-500 to-blue-700 transition-all duration-200"
             style={{
               height: '0%',
               width: '100%'
