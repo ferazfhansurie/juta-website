@@ -84,13 +84,13 @@ const pricingList: PricingProps[] = [
     ],
     addOns: [
       {
-        name: "Google Sheets Integration",
-        price: 150,
+        name: "Google Calendar Integration",
+        price: 50,
         description: "One-time payment"
       },
       {
-        name: "Website Integration",
-        price: 250,
+        name: "Google Sheets Integration",
+        price: 400,
         description: "One-time payment"
       },
       {
@@ -108,7 +108,7 @@ const pricingList: PricingProps[] = [
   {
     title: "Unlimited AI Plan",
     popular: PopularPlanType.YES,
-    price: 688,
+    price: 718,
     description: "Enjoy everything unlimited with up to 3 numbers connection. Get our service for unlimited AI responses and custom solutions.",
     buttonText: "Contact Us",
     checkoutLink: "https://wa.link/ng0obn",
