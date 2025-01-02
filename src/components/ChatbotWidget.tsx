@@ -18,6 +18,11 @@ export const ChatbotWidget: React.FC = () => {
     { text: "hi can ask me anything ya", isUser: false, createdAt: new Date().toISOString() }
   ]);
   const [inputMessage, setInputMessage] = useState("");
+  const [showWhatsAppMessage, setShowWhatsAppMessage] = useState(false);
+  const [showBadge, setShowBadge] = useState(false);
+  const [badgeCount, setBadgeCount] = useState(1);
+  const [intervalDuration, setIntervalDuration] = useState(2000);
+  const [shake, setShake] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -25,6 +30,28 @@ export const ChatbotWidget: React.FC = () => {
   };
 
   useEffect(scrollToBottom, [messages]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowWhatsAppMessage(true);
+      setShowBadge(true);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (showBadge) {
+      const interval = setInterval(() => {
+        setBadgeCount(prev => prev + 1);
+        setShake(true);
+        setTimeout(() => setShake(false), 500); // Remove shake class after animation
+        setIntervalDuration(prev => Math.max(500, prev - 100)); // Decrease interval duration
+      }, intervalDuration);
+
+      return () => clearInterval(interval);
+    }
+  }, [showBadge, intervalDuration]);
 
   const sendMessageToAssistant = async (messageText: string) => {
     const newMessage: Message = {
@@ -97,6 +124,11 @@ export const ChatbotWidget: React.FC = () => {
                 </div>
               ))}
               <div ref={messagesEndRef} />
+              {showWhatsAppMessage && (
+                <div className="mt-4 text-center text-lg text-primary">
+                  WhatsApp Aiman now!
+                </div>
+              )}
             </CardContent>
             <CardFooter className="p-3">
               <div className="flex w-full items-center space-x-2">
@@ -114,12 +146,19 @@ export const ChatbotWidget: React.FC = () => {
             </CardFooter>
           </Card>
         ) : (
-          <Button 
-            onClick={() => {}}
-            className="rounded-full w-16 h-16 flex items-center justify-center"
-          >
-            <MessageCircle size={28} />
-          </Button>
+          <div className="relative">
+            <Button 
+              onClick={() => {}}
+              className="rounded-full w-16 h-16 flex items-center justify-center bg-blue-500"
+            >
+              <MessageCircle size={28} />
+            </Button>
+            {showBadge && (
+              <span className={`absolute top-0 right-0 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs ${shake ? 'animate-shake' : ''}`}>
+                {badgeCount}
+              </span>
+            )}
+          </div>
         )}
       </div>
     </a>
