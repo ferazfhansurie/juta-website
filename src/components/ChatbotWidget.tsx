@@ -43,15 +43,18 @@ export const ChatbotWidget: React.FC = () => {
   useEffect(() => {
     if (showBadge) {
       const interval = setInterval(() => {
-        setBadgeCount(prev => prev + 1);
         setShake(true);
         setTimeout(() => setShake(false), 500); // Remove shake class after animation
-        setIntervalDuration(prev => Math.max(500, prev - 100)); // Decrease interval duration
+
+        if (badgeCount < 9) {
+          setBadgeCount(prev => prev + 1);
+          setIntervalDuration(prev => Math.max(500, prev - 100)); // Decrease interval duration
+        }
       }, intervalDuration);
 
       return () => clearInterval(interval);
     }
-  }, [showBadge, intervalDuration]);
+  }, [showBadge, intervalDuration, badgeCount]);
 
   const sendMessageToAssistant = async (messageText: string) => {
     const newMessage: Message = {
