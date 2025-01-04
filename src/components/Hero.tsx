@@ -35,6 +35,7 @@ export const Hero = () => {
     }
   };
 
+
   return (
     <section className="container flex flex-col items-center justify-between py-16 md:py-24 lg:py-40">
       <div className="text-center max-w-2xl mx-auto z-10">

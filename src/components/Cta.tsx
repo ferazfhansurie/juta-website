@@ -23,16 +23,16 @@ export const Cta = () => {
   return (
     <section
       id="cta"
-      className="bg-muted/50 py-16 my-24 sm:my-32"
+      className=" py-16 my-24 sm:my-32"
     >
       <div className="container text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-8 max-w-2xl mx-auto">
           Ready to Revolutionize Your
-          <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-green-400 to-green-600 text-transparent bg-clip-text">
             {" "}
-            WhatsApp Business{" "}
+            WhatsApp{" "}
           </span>
-          Experience?
+          Communication?
         </h2>
         
         <Button 

@@ -18,6 +18,7 @@ import { ImageSection } from "./components/Image";
 import { VideoSalesLetter } from "./components/VideoSalesLetter";
 import { Features } from "./components/Features";
 import { Policy } from './components/Policy';
+import { Reseller } from './components/Reseller';
 import "./App.css";
 
 
@@ -52,6 +53,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/policy" Component={Policy} />
+        <Route path="/reseller" element={<Reseller />} />
       </Routes>
       <Footer />
       <ScrollToTop />

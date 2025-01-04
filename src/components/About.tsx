@@ -71,7 +71,7 @@ export const About = () => {
                   <li>✅ Expert Assistance (PhDs in AI and customer satisfaction)</li>
                   <li>✅ Proactive Monitoring (We spot issues before they become "isu")</li>
                 </ul>
-                <p className="text-xl text-muted-foreground mt-6">
+                <p className="text-xl py-6 text-muted-foreground mt-6">
                   Our experts are always ready to lend a helping hand. After all, in the Juta Teknologi family, no one gets left behind!
                 </p>
                 <Button 
@@ -86,6 +86,21 @@ export const About = () => {
           </div>
         </CardContent>
       </Card>
+      
+      {/* Reseller Description Section */}
+      <div className="mt-12">
+        <h3 className="text-2xl font-semibold mb-4">Become a Reseller</h3>
+        <p className="text-lg text-muted-foreground mb-6">
+          Join our growing network of resellers and bring cutting-edge AI solutions to your clients. With our comprehensive support and innovative products, you'll be equipped to succeed in the fast-paced tech world.
+        </p>
+        <Button 
+          size="lg" 
+          className="w-full text-xl py-6 bg-primary transform hover:scale-105 transition-all duration-300 shadow-lg"
+          onClick={() => navigate('/reseller')}
+        >
+          Click here to make cash grow on trees
+        </Button>
+      </div>
     </section>
   );
 };

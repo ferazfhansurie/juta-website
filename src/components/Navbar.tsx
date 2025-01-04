@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -26,26 +26,10 @@ interface RouteProps {
 }
 
 const routeList: RouteProps[] = [
-  {
-    href: "#pricing",
-    label: "Offer",
-  },
-  {
-    href: "#about",
-    label: "About",
-  },
-  {
-    href: "#guide",
-    label: "Guide",
-  },
-  {
-    href: "#compare",
-    label: "Comparison",
-  },
 
   {
-    href: "#faq",
-    label: "FAQ",
+    href: "#pricing",
+    label: "Pricing",
   },
   {
     href: "/case-studies",
@@ -60,15 +44,29 @@ const routeList: RouteProps[] = [
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const navigate = useNavigate(); // Add this line
+  const [targetHref, setTargetHref] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (targetHref && targetHref.startsWith('#')) {
+      const element = document.querySelector(targetHref);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [targetHref]);
 
   const handleNavigation = (href: string) => {
     setIsOpen(false);
+    setTargetHref(href);
     if (href.startsWith('/')) {
       navigate(href);
     } else if (href.startsWith('#')) {
       const element = document.querySelector(href);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Set targetHref to handle scrolling after navigation
+        setTargetHref(href);
       }
     } else {
       window.location.href = href;
