@@ -89,19 +89,9 @@ const pricingList: PricingProps[] = [
         description: "One-time payment"
       },
       {
-        name: "Google Sheets Integration",
-        price: 400,
-        description: "One-time payment"
-      },
-      {
-        name: "Other System Integration",
-        price: 500,
-        description: "One-time payment"
-      },
-      {
         name: "Custom Automations",
         price: 1500,
-        description: "Per 1 day of work (24 hours)"
+        description: "Per 1 day of work (24 hours)",
       },
     ],
   },
@@ -109,14 +99,13 @@ const pricingList: PricingProps[] = [
     title: "Unlimited AI Plan",
     popular: PopularPlanType.YES,
     price: 718,
-    description: "Enjoy everything unlimited with up to 3 numbers connection. Get our service for unlimited AI responses and custom solutions.",
+    description: "Enjoy everything unlimited with up to 3 numbers connection. Get our service for unlimited AI responses.",
     buttonText: "Contact Us",
     checkoutLink: "https://wa.link/ng0obn",
     benefitList: [
       "Standard AI Plan Included",
       "Unlimited AI Responses",
       "Up to 3 WhatsApp Connections",
-      "Custom Integration",
     ],
     addOns: [
       
