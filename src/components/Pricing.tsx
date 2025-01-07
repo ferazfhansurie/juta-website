@@ -148,15 +148,13 @@ export const Pricing = () => {
 
   const calculateDiscountedPrice = (price: number, duration: number) => {
     let discount = 0;
-    if (duration === 3) discount = 0.15;
-    if (duration === 6) discount = 0.20;
+    if (duration === 3) discount = 0.10;
     if (duration === 12) discount = 0.30;
     return price * (1 - discount);
   };
 
   const getDiscountPercentage = (duration: number) => {
-    if (duration === 3) return 15;
-    if (duration === 6) return 20;
+    if (duration === 3) return 10;
     if (duration === 12) return 30;
     return 0;
   };
@@ -225,7 +223,7 @@ export const Pricing = () => {
                     </a>
                   </Button>
                   <div className="flex justify-between mt-4 bg-gray-200 dark:bg-gray-800 rounded p-1">
-                    {[1, 3, 6, 12].map((duration) => (
+                    {[1, 3, 12].map((duration) => (
                       <button
                         key={duration}
                         className={`flex-1 px-3 py-1 rounded glow-button ${contractDurations[pricing.title] === duration ? 'bg-gray-400 text-black dark:bg-gray-600 dark:text-white' : 'text-black dark:text-white'}`}
