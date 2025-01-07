@@ -126,11 +126,13 @@ export const Pricing = () => {
       try {
         const response = await fetch('https://ipapi.co/json/');
         const data = await response.json();
+        console.log('Location data:', data);
         const countryCode = data.country_code;
         setCurrencySymbol(countryCode === 'MY' ? 'RM' : 'USD');
       } catch (error) {
         console.error('Error fetching location:', error);
-        setCurrencySymbol('USD');
+        // Fallback to manually set the currency for testing
+        setCurrencySymbol('RM'); // Set to 'RM' for testing purposes
       }
     };
     detectCountry();
