@@ -88,11 +88,6 @@ const pricingList: PricingProps[] = [
         price: 50,
         description: "One-time payment"
       },
-      {
-        name: "Custom Automations",
-        price: 1500,
-        description: "Per 1 day of work (24 hours)",
-      },
     ],
   },
   {
@@ -108,7 +103,11 @@ const pricingList: PricingProps[] = [
       "Up to 3 WhatsApp Connections",
     ],
     addOns: [
-      
+      {
+        name: "Custom Automations",
+        price: 1500,
+        description: "Per 1 day of work (8 hours)",
+      },
     ],
   },
 ];
