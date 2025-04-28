@@ -42,9 +42,8 @@ const pricingList: PricingProps[] = [
     buttonText: "Start 7 Days Free Trial",
     checkoutLink: "https://web.jutasoftware.co/register", // You'll need to update this
     benefitList: [
-      "Team Inbox Plan Included",
-      "Custom Chat-GPT 4.0 Workflows",
-      "AI Prompt Builder",
+      "Custom A.I Workflows",
+      "A.I Prompt Builder",
       "Automated Follow-Up",
       "Automated Booking System",
       "Automated Tagging",
