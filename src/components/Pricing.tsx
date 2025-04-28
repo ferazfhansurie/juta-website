@@ -52,7 +52,6 @@ const pricingList: PricingProps[] = [
       "Automated Blasting",
       "Automated Notification",
       "Full Setup & Maintenance",
-      "24/7 Support",
     ],
     addOns: [
       {

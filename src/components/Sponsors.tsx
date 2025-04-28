@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { useNavigate } from 'react-router-dom';
+import mystiLogo from '../assets/MySTI.png';
 
 function Sponsors() {
   const navigate = useNavigate();
@@ -76,6 +77,18 @@ export const SponsorsComponent = () => {
         <Button onClick={() => navigate('/case-studies')} size="lg">
           View All Case Studies
         </Button>
+        
+        <div className="mt-8 flex flex-col items-center">
+          <Card className="p-6 max-w-3xl w-full bg-slate-500 dark:bg-gray-900 shadow-black/10 dark:shadow-white/10">
+            <div className="flex items-center justify-center mb-6">
+              <img src={mystiLogo} alt="MySTI Approved" className="h-20 mr-4" />
+              <span className="font-bold text-2xl text-white">MySTI Approved</span>
+            </div>
+            <p className="text-base md:text-lg text-white dark:text-gray-300 max-w-2xl mx-auto text-center">
+              MySTI is a special program by the Malaysian government. It helps Malaysian-made products and services reach more customers in Malaysia and other countries.
+            </p>
+          </Card>
+        </div>
       </div>
     </section>
   );
