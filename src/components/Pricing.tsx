@@ -131,7 +131,7 @@ export const Pricing = () => {
       <h2 className="text-3xl md:text-4xl font-bold text-center pb-8">
         Our{' '}
         <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
-           Offers
+           Unique Plan
         </span>
       </h2>
 
