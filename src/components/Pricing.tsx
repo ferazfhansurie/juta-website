@@ -33,34 +33,6 @@ interface PricingProps {
 }
 
 const pricingList: PricingProps[] = [
-  {
-    title: "Team Inbox Plan",
-    popular: PopularPlanType.NO,
-    price: 68,
-    description: "Get started with our Team Inbox for a single number - perfect for small-scale collaboration.",
-    buttonText: "Start 7 Days Free Trial",
-    checkoutLink: "https://web.jutasoftware.co/register",
-    benefitList: [
-      "1 WhatsApp Connection",
-      "Scan QR Code Integration",
-      "Unlimited Users",
-      "Unlimited Contacts",
-      "Unlimited Messages",
-      "Unlimited Blast Messages",
-      "Unlimited Follow Up",
-      "Assign Users & Tag Contacts",
-      "Export & Import Existing Contacts",
-      "Mobile App Access",
-      "Desktop Access",
-    ],
-    addOns: [
-      {
-        name: "1 Additional WhatsApp Connection",
-        price: 50,
-        description: "Monthly payment"
-      },
-    ],
-  },
 
   {
     title: "Standard AI Plan",
@@ -88,21 +60,6 @@ const pricingList: PricingProps[] = [
         price: 50,
         description: "One-time payment"
       },
-    ],
-  },
-  {
-    title: "Unlimited AI Plan",
-    popular: PopularPlanType.YES,
-    price: 718,
-    description: "Enjoy everything unlimited with up to 3 numbers connection. Get our service for unlimited AI responses.",
-    buttonText: "Contact Us",
-    checkoutLink: "https://wa.link/ng0obn",
-    benefitList: [
-      "Standard AI Plan Included",
-      "Unlimited AI Responses",
-      "Up to 3 WhatsApp Connections",
-    ],
-    addOns: [
       {
         name: "Custom Automations",
         price: 1500,
