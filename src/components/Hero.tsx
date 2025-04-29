@@ -67,7 +67,7 @@ export const Hero = () => {
             className="w-full sm:w-auto px-6 py-2 md:px-8 md:py-3 text-base md:text-lg relative overflow-hidden glow-button" 
             onClick={scrollToPricing}
           >
-            Start Free Trial
+            Start 
           </Button>
         </div>
       </div>

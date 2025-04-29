@@ -33,13 +33,41 @@ interface PricingProps {
 }
 
 const pricingList: PricingProps[] = [
+  {
+    title: "Team Inbox Plan",
+    popular: PopularPlanType.NO,
+    price: 68,
+    description: "Get started with our Team Inbox for a single number - perfect for small-scale collaboration.",
+    buttonText: "Start 7 Days Free Trial",
+    checkoutLink: "https://web.jutasoftware.co/register",
+    benefitList: [
+      "1 WhatsApp Connection",
+      "Scan QR Code Integration",
+      "Unlimited Users",
+      "Unlimited Contacts",
+      "Unlimited Messages",
+      "Unlimited Blast Messages",
+      "Unlimited Follow Up",
+      "Assign Users & Tag Contacts",
+      "Export & Import Existing Contacts",
+      "Mobile App Access",
+      "Desktop Access",
+    ],
+    addOns: [
+      {
+        name: "1 Additional WhatsApp Connection",
+        price: 50,
+        description: "Monthly payment"
+      },
+    ],
+  },
 
   {
     title: "Standard AI Plan",
     popular: PopularPlanType.NO,
     price: 318,
     description: "Enterprise-grade solution with 500 free AI responses monthly. Additional responses at RM10 per 100 responses.",
-    buttonText: "Start 7 Days Free Trial",
+    buttonText: "Start",
     checkoutLink: "https://web.jutasoftware.co/register", // You'll need to update this
     benefitList: [
       "Custom A.I Workflows",
@@ -65,6 +93,7 @@ const pricingList: PricingProps[] = [
       },
     ],
   },
+ 
 ];
 
 
@@ -130,7 +159,7 @@ export const Pricing = () => {
       <h2 className="text-3xl md:text-4xl font-bold text-center pb-8">
         Our{' '}
         <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
-           Unique Plan
+           Offers
         </span>
       </h2>
 

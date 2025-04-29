@@ -18,9 +18,9 @@ export const VideoSalesLetter: React.FC = () => {
   return (
     <section className="container py-12 sm:py-16">
        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">
-            Watch How to start{' '}
+            Watch How to Start{' '}
             <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
-              Your Free Trial
+              
             </span>
           </h2>
       <Card className="w-full max-w-4xl mx-auto">
