@@ -20,6 +20,9 @@ interface PricingProps {
   title: string;
   popular: PopularPlanType;
   price: number;
+  setupFee: number;
+  supportFee: number;
+  messagePrice: number;
   originalPrice?: number;
   description: string;
   buttonText: string;
@@ -34,41 +37,15 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: "Team Inbox Plan",
-    popular: PopularPlanType.NO,
-    price: 68,
-    description: "Get started with our Team Inbox for a single number - perfect for small-scale collaboration.",
-    buttonText: "Start 7 Days Free Trial",
-    checkoutLink: "https://web.jutasoftware.co/register",
-    benefitList: [
-      "1 WhatsApp Connection",
-      "Scan QR Code Integration",
-      "Unlimited Users",
-      "Unlimited Contacts",
-      "Unlimited Messages",
-      "Unlimited Blast Messages",
-      "Unlimited Follow Up",
-      "Assign Users & Tag Contacts",
-      "Export & Import Existing Contacts",
-      "Mobile App Access",
-      "Desktop Access",
-    ],
-    addOns: [
-      {
-        name: "1 Additional WhatsApp Connection",
-        price: 50,
-        description: "Monthly payment"
-      },
-    ],
-  },
-
-  {
     title: "Standard AI Plan",
     popular: PopularPlanType.NO,
-    price: 318,
+    price: 0,
+    setupFee: 1500,
+    supportFee: 300,
+    messagePrice: 10,
     description: "Enterprise-grade solution with 500 free AI responses monthly. Additional responses at RM10 per 100 responses.",
     buttonText: "Start",
-    checkoutLink: "https://web.jutasoftware.co/register", // You'll need to update this
+    checkoutLink: "https://web.jutateknologi.com/register",
     benefitList: [
       "Custom A.I Workflows",
       "A.I Prompt Builder",
@@ -78,7 +55,6 @@ const pricingList: PricingProps[] = [
       "Automated Assign",
       "Automated Blasting",
       "Automated Notification",
-      "Full Setup & Maintenance",
     ],
     addOns: [
       {
@@ -93,16 +69,12 @@ const pricingList: PricingProps[] = [
       },
     ],
   },
- 
 ];
-
 
 export const Pricing = () => {
   const [currencySymbol, setCurrencySymbol] = useState('RM');
   const [contractDurations, setContractDurations] = useState<{ [key: string]: number }>({
-    "Team Inbox Plan": 1,
     "Standard AI Plan": 1,
-    "Unlimited AI Plan": 1,
   });
 
   useEffect(() => {
@@ -179,19 +151,24 @@ export const Pricing = () => {
               }`}
             >
               <CardHeader>
-                <CardTitle className="flex item-center justify-between">
-                  {pricing.title}
-                </CardTitle>
+               
                 
-                <div className="flex items-baseline">
-                  <span className="text-3xl font-bold">{currencySymbol} {discountedPrice.toFixed(2)}</span>
-                  {discountPercentage > 0 && (
-                    <span className="ml-2 text-xl text-green-500">
-                      {discountPercentage}% OFF
-                    </span>
-                  )}
-                  <span className="ml-2 text-muted-foreground"> /month</span>
+                {/* Setup and Support Fees */}
+                <div className="mt-4 space-y-2 text-xl">
+                  <div className="flex justify-between">
+                    <span>Setup:</span>
+                    <span className="font-medium">{currencySymbol} {pricing.setupFee}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Support:</span>
+                    <span className="font-medium">{currencySymbol} {pricing.supportFee}/month</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Messages:</span>
+                    <span className="font-medium">{currencySymbol} {pricing.messagePrice} per 100</span>
+                  </div>
                 </div>
+                <hr className="w-4/5 m-auto mb-4" />
                 <CardDescription>{pricing.description}</CardDescription>
               </CardHeader>
 
@@ -207,18 +184,7 @@ export const Pricing = () => {
                       {pricing.buttonText}
                     </a>
                   </Button>
-                  <div className="flex justify-between mt-4 bg-gray-200 dark:bg-gray-800 rounded p-1">
-                    {[1, 3, 12].map((duration) => (
-                      <button
-                        key={duration}
-                        className={`flex-1 px-3 py-1 rounded glow-button ${contractDurations[pricing.title] === duration ? 'bg-gray-400 text-black dark:bg-gray-600 dark:text-white' : 'text-black dark:text-white'}`}
-                        onClick={() => handleDurationChange(pricing.title, duration)}
-                        style={{ whiteSpace: 'nowrap', border: 'none', fontSize: '0.875rem', lineHeight: '1.25rem' }}
-                      >
-                        {duration} month{duration > 1 ? 's' : ''}
-                      </button>
-                    ))}
-                  </div>
+             
                 </div>
               </CardContent>
 
