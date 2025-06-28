@@ -21,7 +21,7 @@ export const Footer = () => {
               Office Address: NO 27­1 JALAN NEUTRON Q U16/Q DENAI ALAM, SEKSYEN U16 40160 SHAH ALAM SELANGOR MALAYSIA
             </p>
             <p className="text-muted-foreground">Office Phone: +601121677672</p>
-            <p className="text-muted-foreground">Email: team@jutasoftware.co</p>
+            <p className="text-muted-foreground">Email: team@jutateknologi.com</p>
           </div>
 
           <div className="flex flex-col gap-2">

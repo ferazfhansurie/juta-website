@@ -71,13 +71,13 @@ export const Policy = () => {
           <li>Objection: Object to the processing of your data for specific purposes.</li>
           <li>Lodge complaints: File complaints with the relevant regulatory authority.</li>
         </ul>
-        <p className="text-base leading-relaxed">To exercise your rights, contact us at team@jutasoftware.co.</p>
+        <p className="text-base leading-relaxed">To exercise your rights, contact us at team@jutateknologi.com.</p>
         <h2 className="text-2xl font-bold mt-8">9. Your Consent</h2>
-        <p className="text-base leading-relaxed">By providing your personal data to us, you consent to the processing of your personal data as outlined in this policy. If you do not consent to any part of this policy, please refrain from using our services or providing personal data to us. You may withdraw your consent at any time by contacting us at team@jutasoftware.co. However, withdrawal of consent may limit our ability to provide you with certain services.</p>
+        <p className="text-base leading-relaxed">By providing your personal data to us, you consent to the processing of your personal data as outlined in this policy. If you do not consent to any part of this policy, please refrain from using our services or providing personal data to us. You may withdraw your consent at any time by contacting us at team@jutateknologi.com. However, withdrawal of consent may limit our ability to provide you with certain services.</p>
         <h2 className="text-2xl font-bold mt-8">10. Updates to This Policy</h2>
         <p className="text-base leading-relaxed">This policy may be updated periodically to reflect changes in laws or our practices. Any updates will be communicated on our website, and continued use of our services constitutes acceptance of the updated policy.</p>
         <h2 className="text-2xl font-bold mt-8">11. Contact Us</h2>
-        <p className="text-base leading-relaxed">For questions, concerns, or requests related to this policy, please contact us at team@jutasoftware.co or call us at +6011-2167-7672</p>
+        <p className="text-base leading-relaxed">For questions, concerns, or requests related to this policy, please contact us at team@jutateknologi.com or call us at +6011-2167-7672</p>
         <p className="text-lg font-semibold">JUTA TECHNOLOGI SDN BHD</p>
       </div>
     </section>
