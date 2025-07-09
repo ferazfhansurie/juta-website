@@ -63,7 +63,7 @@ const pricingList: PricingProps[] = [
         description: "One-time payment"
       },
       {
-        name: "Custom Automations",
+        name: "Custom Integrations",
         price: 1500,
         description: "Per 1 day of work (8 hours)",
       },
