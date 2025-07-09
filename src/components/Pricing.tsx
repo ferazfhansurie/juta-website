@@ -4,11 +4,9 @@ import {
   CardContent,
   CardDescription,
   CardFooter,
-  CardHeader,
-  CardTitle,
+  CardHeader,  
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
-import { pixelEvent } from '../utils/pixel';
 import { useState, useEffect } from 'react';
 
 enum PopularPlanType {
@@ -73,9 +71,7 @@ const pricingList: PricingProps[] = [
 
 export const Pricing = () => {
   const [currencySymbol, setCurrencySymbol] = useState('RM');
-  const [contractDurations, setContractDurations] = useState<{ [key: string]: number }>({
-    "Standard AI Plan": 1,
-  });
+  
 
   useEffect(() => {
     const detectCountry = async () => {
@@ -94,34 +90,11 @@ export const Pricing = () => {
     detectCountry();
   }, []);
 
-  const handlePricingClick = (planName: string, price: number) => {
-    pixelEvent('ViewContent', {
-      content_type: 'product',
-      content_name: planName,
-      currency: 'MYR',
-      value: price
-    });
-  };
 
-  const calculateDiscountedPrice = (price: number, duration: number) => {
-    let discount = 0;
-    if (duration === 3) discount = 0.10;
-    if (duration === 12) discount = 0.30;
-    return price * (1 - discount);
-  };
 
-  const getDiscountPercentage = (duration: number) => {
-    if (duration === 3) return 10;
-    if (duration === 12) return 30;
-    return 0;
-  };
 
-  const handleDurationChange = (planTitle: string, duration: number) => {
-    setContractDurations((prev) => ({
-      ...prev,
-      [planTitle]: duration,
-    }));
-  };
+
+
 
   return (
     <section
@@ -137,9 +110,6 @@ export const Pricing = () => {
 
       <div className="flex flex-col md:flex-row justify-center gap-8">
         {pricingList.map((pricing: PricingProps) => {
-          const duration = contractDurations[pricing.title];
-          const discountedPrice = calculateDiscountedPrice(pricing.price, duration);
-          const discountPercentage = getDiscountPercentage(duration);
 
           return (
             <Card
@@ -179,7 +149,6 @@ export const Pricing = () => {
                       href={pricing.checkoutLink} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      onClick={() => handlePricingClick(pricing.title, discountedPrice)}
                     >
                       {pricing.buttonText}
                     </a>
