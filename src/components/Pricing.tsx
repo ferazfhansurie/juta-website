@@ -39,7 +39,7 @@ const pricingList: PricingProps[] = [
     popular: PopularPlanType.NO,
     price: 0,
     setupFee: 1500,
-    supportFee: 300,
+    supportFee: 518,
     messagePrice: 10,
     description: "Enterprise-grade solution with 500 free AI responses monthly. Additional responses at RM10 per 100 responses.",
     buttonText: "Start",
