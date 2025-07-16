@@ -126,8 +126,12 @@ export const Pricing = () => {
                 {/* Setup and Support Fees */}
                 <div className="mt-4 space-y-2 text-xl">
                   <div className="flex justify-between">
-                    <span>Setup:</span>
-                    <span className="font-medium">{currencySymbol} {pricing.setupFee}</span>
+                    <span>Self Setup:</span>
+                    <span className="font-medium">Free</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Expert Setup:</span>
+                    <span className="font-medium">{currencySymbol} 1500</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Support:</span>
