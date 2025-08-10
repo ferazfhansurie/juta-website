@@ -296,6 +296,83 @@ export const Pricing = () => {
           </Card>
         </div>
       </div>
+
+      {/* Plan Comparison Table */}
+      <div className="mt-16 max-w-6xl mx-auto">
+        <h3 className="text-2xl font-bold text-center mb-8">Plan Comparison</h3>
+        <Card className="border border-gray-200 dark:border-gray-700">
+          <CardContent className="p-6">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <th className="text-left py-4 px-4 font-semibold text-lg">Feature</th>
+                    <th className="text-center py-4 px-4 font-semibold text-lg">Starter</th>
+                    <th className="text-center py-4 px-4 font-semibold text-lg">Professional</th>
+                    <th className="text-center py-4 px-4 font-semibold text-lg">Enterprise</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-100 dark:border-gray-800">
+                    <td className="py-4 px-4 font-medium">AI Responses/Month</td>
+                    <td className="text-center py-4 px-4">500</td>
+                    <td className="text-center py-4 px-4">5,000</td>
+                    <td className="text-center py-4 px-4">20,000</td>
+                  </tr>
+                  <tr className="border-b border-gray-100 dark:border-gray-800">
+                    <td className="py-4 px-4 font-medium">AI Systems</td>
+                    <td className="text-center py-4 px-4">
+                      <Check className="text-green-500 mx-auto" />
+                    </td>
+                    <td className="text-center py-4 px-4">
+                      <Check className="text-green-500 mx-auto" />
+                    </td>
+                    <td className="text-center py-4 px-4">
+                      <Check className="text-green-500 mx-auto" />
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-100 dark:border-gray-800">
+                    <td className="py-4 px-4 font-medium">Full Maintenance & Support</td>
+                    <td className="text-center py-4 px-4">
+                      <span className="text-red-500 text-2xl">×</span>
+                    </td>
+                    <td className="text-center py-4 px-4">
+                      <Check className="text-green-500 mx-auto" />
+                    </td>
+                    <td className="text-center py-4 px-4">
+                      <Check className="text-green-500 mx-auto" />
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-100 dark:border-gray-800">
+                    <td className="py-4 px-4 font-medium">Custom Automations</td>
+                    <td className="text-center py-4 px-4">
+                      <span className="text-red-500 text-2xl">×</span>
+                    </td>
+                    <td className="text-center py-4 px-4">
+                      <span className="text-red-500 text-2xl">×</span>
+                    </td>
+                    <td className="text-center py-4 px-4">
+                      <Check className="text-green-500 mx-auto" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="py-4 px-4 font-medium">Mobile & Desktop Access</td>
+                    <td className="text-center py-4 px-4">
+                      <Check className="text-green-500 mx-auto" />
+                    </td>
+                    <td className="text-center py-4 px-4">
+                      <Check className="text-green-500 mx-auto" />
+                    </td>
+                    <td className="text-center py-4 px-4">
+                      <Check className="text-green-500 mx-auto" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </section>
   );
 };
