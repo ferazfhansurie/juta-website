@@ -196,7 +196,10 @@ export const Pricing = () => {
 
               <CardContent>
                 <div className="flex flex-col gap-2">
-                  <Button className="w-full glow-button" asChild>
+                  <Button 
+                    className="w-full bg-transparent border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-500 transition-colors" 
+                    asChild
+                  >
                     <a 
                       href={pricing.checkoutLink} 
                       target="_blank" 
@@ -223,7 +226,7 @@ export const Pricing = () => {
                         benefit.startsWith("Standard AI Plan") || benefit.startsWith("Team Inbox Plan")
                           ? "bg-gradient-to-r from-blue-800/80 to-blue-400/80 p-2 rounded-lg text-white flex-1" 
                           : benefit.includes("AI Responses Monthly")
-                          ? "ml-2 font-bold text-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 rounded-lg"
+                          ? "ml-2 font-semibold text-base text-blue-400 dark:text-blue-300"
                           : "ml-2"
                       }>
                         {benefit}
