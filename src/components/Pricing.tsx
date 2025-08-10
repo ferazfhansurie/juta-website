@@ -35,35 +35,87 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: "Standard AI Plan",
+    title: "Starter Plan",
     popular: PopularPlanType.NO,
-    price: 0,
-    setupFee: 1500,
-    supportFee: 518,
-    messagePrice: 10,
-    description: "Enterprise-grade solution with 500 free AI responses monthly. Additional responses at RM10 per 100 responses.",
+    price: 98,
+    setupFee: 0,
+    supportFee: 0,
+    messagePrice: 0,
+    description: "Perfect for small businesses. Get 500 AI responses monthly with full access to all system features.",
     buttonText: "Start",
     checkoutLink: "https://web.jutateknologi.com/register",
     benefitList: [
-      "Custom A.I Workflows",
-      "A.I Prompt Builder",
-      "Automated Follow-Up",
-      "Automated Booking System",
-      "Automated Tagging",
-      "Automated Assign",
-      "Automated Blasting",
-      "Automated Notification",
+      "500 AI Responses Monthly",
+      "AI Follow-Up System",
+      "AI Booking System",
+      "AI Tagging System",
+      "AI Assign System",
+      "Mobile App Access",
+      "Desktop App Access",
     ],
     addOns: [
       {
-        name: "Google Calendar Integration",
-        price: 50,
-        description: "One-time payment"
+        name: "Full AI Agent Setup",
+        price: 0,
+        description: "Price: Based On Requirements"
       },
+    ],
+  },
+  {
+    title: "Professional Plan",
+    popular: PopularPlanType.YES,
+    price: 688,
+    setupFee: 0,
+    supportFee: 0,
+    messagePrice: 0,
+    description: "Premium support with 5,000 AI responses monthly. We handle your prompting, follow-ups, and maintenance.",
+    buttonText: "Start",
+    checkoutLink: "https://web.jutateknologi.com/register",
+    benefitList: [
+      "5,000 AI Responses Monthly",
+      "AI Follow-Up System",
+      "AI Booking System",
+      "AI Tagging System",
+      "AI Assign System",
+      "Mobile App Access",
+      "Desktop App Access",
+      "Priority Support",
+    ],
+    addOns: [
       {
-        name: "Custom Integrations",
-        price: 1500,
-        description: "Per 1 day of work (8 hours)",
+        name: "Full AI Agent Setup",
+        price: 0,
+        description: "Price: Based On Requirements"
+      },
+    ],
+  },
+  {
+    title: "Enterprise Plan",
+    popular: PopularPlanType.NO,
+    price: 3088,
+    setupFee: 0,
+    supportFee: 0,
+    messagePrice: 0,
+    description: "Complete solution with 20,000 AI responses, custom integrations, full setup and maintenance included.",
+    buttonText: "Start",
+    checkoutLink: "https://web.jutateknologi.com/register",
+    benefitList: [
+      "20,000 AI Responses Monthly",
+      "AI Follow-Up System",
+      "AI Booking System",
+      "AI Tagging System",
+      "AI Assign System",
+      "Mobile App Access",
+      "Desktop App Access",
+      "Custom Automations & Integrations",
+      "Complete Maintenance",
+      "24/7 Priority Support",
+    ],
+    addOns: [
+      {
+        name: "Full AI Agent Setup",
+        price: 0,
+        description: "Included"
       },
     ],
   },
@@ -108,39 +160,35 @@ export const Pricing = () => {
         </span>
       </h2>
 
-      <div className="flex flex-col md:flex-row justify-center gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {pricingList.map((pricing: PricingProps) => {
 
           return (
             <Card
               key={pricing.title}
-              className={`w-full md:w-1/2 max-w-md ${
+              className={`w-full ${
                 pricing.popular === PopularPlanType.YES
-                  ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10"
-                  : ""
+                  ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-2 border-primary scale-105"
+                  : "border border-gray-200 dark:border-gray-700"
               }`}
             >
               <CardHeader>
-               
+                {pricing.popular === PopularPlanType.YES && (
+                  <div className="text-center mb-2">
+                    <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
                 
-                {/* Setup and Support Fees */}
-                <div className="mt-4 space-y-2 text-xl">
-                  <div className="flex justify-between">
-                    <span>Self Setup:</span>
-                    <span className="font-medium">Free</span>
+                <h3 className="text-2xl font-bold text-center mb-4">{pricing.title}</h3>
+                
+                {/* Monthly Price */}
+                <div className="mt-4 text-center">
+                  <div className="text-5xl font-bold text-white">
+                    {currencySymbol} {pricing.price}
                   </div>
-                  <div className="flex justify-between">
-                    <span>Expert Setup:</span>
-                    <span className="font-medium">{currencySymbol} 1500</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Support:</span>
-                    <span className="font-medium">{currencySymbol} {pricing.supportFee}/month</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Messages:</span>
-                    <span className="font-medium">{currencySymbol} {pricing.messagePrice} per 100</span>
-                  </div>
+                  <div className="text-xl text-muted-foreground">/month</div>
                 </div>
                 <hr className="w-4/5 m-auto mb-4" />
                 <CardDescription>{pricing.description}</CardDescription>
@@ -174,6 +222,8 @@ export const Pricing = () => {
                       <h3 className={
                         benefit.startsWith("Standard AI Plan") || benefit.startsWith("Team Inbox Plan")
                           ? "bg-gradient-to-r from-blue-800/80 to-blue-400/80 p-2 rounded-lg text-white flex-1" 
+                          : benefit.includes("AI Responses Monthly")
+                          ? "ml-2 font-bold text-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 rounded-lg"
                           : "ml-2"
                       }>
                         {benefit}
@@ -189,9 +239,8 @@ export const Pricing = () => {
                         {pricing.addOns.map((addon) => (
                           <div key={addon.name} className="mb-3">
                             <div>{addon.name}</div>
-                            <div className="flex items-center gap-2">
-                              <span>RM {addon.price}</span>
-                              <span className="text-sm text-muted-foreground">{addon.description}</span>
+                            <div className="text-sm text-muted-foreground">
+                              {addon.description}
                             </div>
                           </div>
                         ))}
