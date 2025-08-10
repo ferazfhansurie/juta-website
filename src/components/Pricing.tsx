@@ -53,13 +53,7 @@ const pricingList: PricingProps[] = [
       "Mobile App Access",
       "Desktop App Access",
     ],
-    addOns: [
-      {
-        name: "Full AI Agent Setup",
-        price: 0,
-        description: "Price: Based On Requirements"
-      },
-    ],
+    addOns: [],
   },
   {
     title: "Professional Plan",
@@ -79,15 +73,9 @@ const pricingList: PricingProps[] = [
       "AI Assign System",
       "Mobile App Access",
       "Desktop App Access",
-      "Priority Support",
+      "Full Maintenance & Support",
     ],
-    addOns: [
-      {
-        name: "Full AI Agent Setup",
-        price: 0,
-        description: "Price: Based On Requirements"
-      },
-    ],
+    addOns: [],
   },
   {
     title: "Enterprise Plan",
@@ -100,24 +88,17 @@ const pricingList: PricingProps[] = [
     buttonText: "Start",
     checkoutLink: "https://web.jutateknologi.com/register",
     benefitList: [
-      "20,000 AI Responses Monthly",
+      "20,000 AI Responses Monthly", 
       "AI Follow-Up System",
       "AI Booking System",
       "AI Tagging System",
       "AI Assign System",
       "Mobile App Access",
       "Desktop App Access",
-      "Custom Automations & Integrations",
-      "Complete Maintenance",
-      "24/7 Priority Support",
+      "Full Maintenance & Support",
+      "Full AI Setup & Custom Automations",
     ],
-    addOns: [
-      {
-        name: "Full AI Agent Setup",
-        price: 0,
-        description: "Included"
-      },
-    ],
+    addOns: [],
   },
 ];
 
@@ -255,6 +236,65 @@ export const Pricing = () => {
             </Card>
           );
         })}
+      </div>
+
+            {/* Add-ons Section */}
+      <div className="mt-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Full AI Agent Setup */}
+          <Card className="border border-gray-200 dark:border-gray-700">
+            <CardHeader className="text-center">
+              <h3 className="text-2xl font-bold">Full AI Setup & Custom Automations</h3>
+            </CardHeader>
+            <CardContent className="text-center">
+              <div className="text-3xl font-bold text-blue-400 dark:text-blue-300 mb-2">
+                Custom Pricing
+              </div>
+              <p className="text-muted-foreground mb-4">
+                Based on your specific requirements
+              </p>
+              <Button 
+                className="bg-transparent border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-500 transition-colors" 
+                asChild
+              >
+                <a 
+                  href="https://web.jutateknologi.com/register" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Get Quote
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
+
+          {/* AI Response Top-up */}
+          <Card className="border border-gray-200 dark:border-gray-700">
+            <CardHeader className="text-center">
+              <h3 className="text-2xl font-bold">AI Response Top-up</h3>
+            </CardHeader>
+            <CardContent className="text-center">
+              <div className="text-3xl font-bold text-blue-400 dark:text-blue-300 mb-2">
+                RM 10 per 100 AI Responses
+              </div>
+              <p className="text-muted-foreground mb-4">
+                Top up anytime, regardless of your plan
+              </p>
+              <Button 
+                className="bg-transparent border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-500 transition-colors" 
+                asChild
+              >
+                <a 
+                  href="https://web.jutateknologi.com/register" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Get Top-up
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </section>
   );
