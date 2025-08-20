@@ -35,17 +35,18 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: "Starter Plan",
+    title: "Free Plan",
     popular: PopularPlanType.NO,
-    price: 98,
+    price: 0,
     setupFee: 0,
     supportFee: 0,
     messagePrice: 0,
-    description: "Perfect for small businesses. Get 500 AI responses monthly with full access to all system features.",
-    buttonText: "Start",
+    description: "Perfect for small businesses. Get 100 AI responses monthly and 100 contacts with full access to all system features.",
+    buttonText: "Start Free",
     checkoutLink: "https://web.jutateknologi.com/register",
     benefitList: [
-      "500 AI Responses Monthly",
+      "100 AI Responses Monthly",
+      "100 Contacts",
       "AI Follow-Up System",
       "AI Booking System",
       "AI Tagging System",
@@ -56,17 +57,18 @@ const pricingList: PricingProps[] = [
     addOns: [],
   },
   {
-    title: "Professional Plan",
+    title: "Enterprise Plan",
     popular: PopularPlanType.YES,
-    price: 688,
+    price: 888,
     setupFee: 0,
     supportFee: 0,
     messagePrice: 0,
-    description: "Premium support with 5,000 AI responses monthly. We handle your prompting, follow-ups, and maintenance.",
+    description: "Premium support with 5,000 AI responses monthly and 10,000 contacts. We handle your prompting, follow-ups, and maintenance.",
     buttonText: "Start",
     checkoutLink: "https://web.jutateknologi.com/register",
     benefitList: [
       "5,000 AI Responses Monthly",
+      "10,000 Contacts",
       "AI Follow-Up System",
       "AI Booking System",
       "AI Tagging System",
@@ -78,17 +80,18 @@ const pricingList: PricingProps[] = [
     addOns: [],
   },
   {
-    title: "Enterprise Plan",
+    title: "Pro Plan",
     popular: PopularPlanType.NO,
     price: 3088,
     setupFee: 0,
     supportFee: 0,
     messagePrice: 0,
-    description: "Complete solution with 20,000 AI responses, custom integrations, full setup and maintenance included.",
+    description: "Complete solution with 20,000 AI responses, 50,000 contacts, custom integrations, full setup and maintenance included.",
     buttonText: "Start",
     checkoutLink: "https://web.jutateknologi.com/register",
     benefitList: [
-      "20,000 AI Responses Monthly", 
+      "20,000 AI Responses Monthly",
+      "50,000 Contacts",
       "AI Follow-Up System",
       "AI Booking System",
       "AI Tagging System",
@@ -307,7 +310,7 @@ export const Pricing = () => {
                 <thead>
                   <tr className="border-b border-gray-200 dark:border-gray-700">
                     <th className="text-left py-4 px-4 font-semibold text-lg">Feature</th>
-                    <th className="text-center py-4 px-4 font-semibold text-lg">Starter</th>
+                    <th className="text-center py-4 px-4 font-semibold text-lg">Free</th>
                     <th className="text-center py-4 px-4 font-semibold text-lg">Professional</th>
                     <th className="text-center py-4 px-4 font-semibold text-lg">Enterprise</th>
                   </tr>
@@ -315,9 +318,15 @@ export const Pricing = () => {
                 <tbody>
                   <tr className="border-b border-gray-100 dark:border-gray-800">
                     <td className="py-4 px-4 font-medium">AI Responses/Month</td>
-                    <td className="text-center py-4 px-4">500</td>
+                    <td className="text-center py-4 px-4">100</td>
                     <td className="text-center py-4 px-4">5,000</td>
                     <td className="text-center py-4 px-4">20,000</td>
+                  </tr>
+                  <tr className="border-b border-gray-100 dark:border-gray-800">
+                    <td className="py-4 px-4 font-medium">Contacts</td>
+                    <td className="text-center py-4 px-4">100</td>
+                    <td className="text-center py-4 px-4">1,000</td>
+                    <td className="text-center py-4 px-4">5,000</td>
                   </tr>
                   <tr className="border-b border-gray-100 dark:border-gray-800">
                     <td className="py-4 px-4 font-medium">AI Systems</td>
