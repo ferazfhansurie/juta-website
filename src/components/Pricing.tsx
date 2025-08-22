@@ -35,9 +35,9 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: "Free Plan",
+    title: "Standard Plan",
     popular: PopularPlanType.NO,
-    price: 0,
+    price: 500,
     setupFee: 0,
     supportFee: 0,
     messagePrice: 0,
@@ -45,8 +45,8 @@ const pricingList: PricingProps[] = [
     buttonText: "Start Free",
     checkoutLink: "https://web.jutateknologi.com/register",
     benefitList: [
-      "100 AI Responses Monthly",
-      "100 Contacts",
+      "1000 AI Responses Monthly",
+      "5000 Contacts",
       "AI Follow-Up System",
       "AI Booking System",
       "AI Tagging System",
@@ -57,9 +57,9 @@ const pricingList: PricingProps[] = [
     addOns: [],
   },
   {
-    title: "Enterprise Plan",
+    title: "Pro Support Plan",
     popular: PopularPlanType.YES,
-    price: 888,
+    price: 950,
     setupFee: 0,
     supportFee: 0,
     messagePrice: 0,
@@ -80,7 +80,7 @@ const pricingList: PricingProps[] = [
     addOns: [],
   },
   {
-    title: "Pro Plan",
+    title: "Enterprise Plan",
     popular: PopularPlanType.NO,
     price: 3088,
     setupFee: 0,
