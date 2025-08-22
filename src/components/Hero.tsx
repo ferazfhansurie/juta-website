@@ -64,10 +64,10 @@ export const Hero = () => {
           <Button 
             ref={buttonRef}
             size="lg" 
-            className="w-full sm:w-auto px-6 py-2 md:px-8 md:py-3 text-base md:text-lg relative overflow-hidden glow-button" 
+            className="w-full sm:w-auto px-8 py-4 md:px-10 md:py-5 text-lg md:text-xl font-bold relative overflow-hidden bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white border-2 border-blue-600 rounded-xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-110 transform hover:-translate-y-1" 
             onClick={scrollToPricing}
           >
-            Start 
+            Start Here
           </Button>
         </div>
       </div>

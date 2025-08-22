@@ -111,7 +111,22 @@ export const Navbar = () => {
                       {label}
                     </a>
                   ))}
-           
+                  <a
+                    href="https://web.jutateknologi.com/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 border-2 border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-200 hover:scale-105 w-full text-center"
+                  >
+                    Login
+                  </a>
+                  <a
+                    href="https://web.jutateknologi.com/register"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 border-2 border-blue-600 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 transform w-full text-center"
+                  >
+                    Register
+                  </a>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -152,12 +167,22 @@ export const Navbar = () => {
                 {label}
               </a>
             ))}
-            <button
-              onClick={scrollToPricing}
-              className={`border ${buttonVariants({ variant: "secondary" })}`}
+            <a
+              href="https://web.jutateknologi.com/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 border-2 border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-200 hover:scale-105"
             >
-              Start 
-            </button>
+              Login
+            </a>
+            <a
+              href="https://web.jutateknologi.com/register"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 border-2 border-blue-600 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 transform"
+            >
+              Register
+            </a>
           </div>
         </NavigationMenuList>
       </NavigationMenu>
