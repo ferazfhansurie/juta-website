@@ -73,13 +73,7 @@ export const Navbar = () => {
     }
   };
 
-  const scrollToPricing = () => {
-    const pricingSection = document.getElementById('pricing');
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsOpen(false);
-  };
+
 
   return (
     <header className="sticky top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
