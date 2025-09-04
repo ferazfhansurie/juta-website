@@ -35,18 +35,17 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: "Free Plan",
+    title: "Pay-as-you-go",
     popular: PopularPlanType.NO,
     price: 0,
     setupFee: 0,
     supportFee: 0,
-    messagePrice: 0,
-    description: "Perfect for getting started. Get 100 AI responses monthly and 100 contacts with full access to all system features.",
-    buttonText: "Start Free",
+    messagePrice: 0.10,
+    description: "Perfect for getting started. Pay only for what you use with full access to all system features.",
+    buttonText: "Register",
     checkoutLink: "https://web.jutateknologi.com/register",
     benefitList: [
-      "100 AI Responses Monthly",
-      "100 Contacts",
+      "Pay per AI Response",
       "AI Follow-Up System",
       "AI Booking System",
       "AI Tagging System",
@@ -57,47 +56,24 @@ const pricingList: PricingProps[] = [
     addOns: [],
   },
   {
-    title: "Standard Plan",
-    popular: PopularPlanType.NO,
-    price: 500,
-    setupFee: 0,
-    supportFee: 0,
-    messagePrice: 0,
-    description: "Perfect for small businesses. Get 1000 AI responses monthly and 5000 contacts with full access to all system features.",
-    buttonText: "Start",
-    checkoutLink: "https://web.jutateknologi.com/register",
-    benefitList: [
-      "1000 AI Responses Monthly",
-      "5000 Contacts",
-      "AI Follow-Up System",
-      "AI Booking System",
-      "AI Tagging System",
-      "AI Assign System",
-      "Mobile App Access",
-      "Desktop App Access",
-    ],
-    addOns: [],
-  },
-  {
-    title: "Pro Support Plan",
+    title: "Premium Support Plan",
     popular: PopularPlanType.YES,
     price: 950,
     setupFee: 0,
     supportFee: 0,
     messagePrice: 0,
-    description: "Premium support with 5,000 AI responses monthly and 10,000 contacts. We handle your prompting, follow-ups, and maintenance.",
+    description: "Premium support with 5,000 AI responses monthly. We handle your prompting, follow-ups, AI setup, and maintenance.",
     buttonText: "Start",
     checkoutLink: "https://web.jutateknologi.com/register",
     benefitList: [
       "5,000 AI Responses Monthly",
-      "10,000 Contacts",
+      "AI Setup & Maintenance",
       "AI Follow-Up System",
       "AI Booking System",
       "AI Tagging System",
       "AI Assign System",
       "Mobile App Access",
       "Desktop App Access",
-      "Full Maintenance & Support",
     ],
     addOns: [],
   },
@@ -108,20 +84,19 @@ const pricingList: PricingProps[] = [
     setupFee: 0,
     supportFee: 0,
     messagePrice: 0,
-    description: "Complete solution with 20,000 AI responses, 50,000 contacts, custom integrations, full setup and maintenance included.",
+    description: "Complete solution with 20,000 AI responses, custom automations, AI setup and maintenance included.",
     buttonText: "Start",
     checkoutLink: "https://web.jutateknologi.com/register",
     benefitList: [
       "20,000 AI Responses Monthly",
-      "50,000 Contacts",
+      "AI Setup & Maintenance",
+      "Custom Automations",
       "AI Follow-Up System",
       "AI Booking System",
       "AI Tagging System",
       "AI Assign System",
       "Mobile App Access",
       "Desktop App Access",
-      "Full Maintenance & Support",
-      "Full AI Setup & Custom Automations",
     ],
     addOns: [],
   },
@@ -166,7 +141,7 @@ export const Pricing = () => {
         </span>
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {pricingList.map((pricing: PricingProps) => {
 
           return (
@@ -192,10 +167,10 @@ export const Pricing = () => {
                 {/* Monthly Price */}
                 <div className="mt-4 text-center">
                   <div className="text-5xl font-bold text-white">
-                    {typeof pricing.price === 'number' ? (pricing.price === 0 ? "Free" : `${currencySymbol} ${pricing.price}`) : pricing.price}
+                    {typeof pricing.price === 'number' ? (pricing.price === 0 ? (pricing.title === "Pay-as-you-go" ? "RM 0.10" : "Free") : `${currencySymbol} ${pricing.price}`) : `${currencySymbol} ${pricing.price}`}
                   </div>
                   <div className="text-xl text-muted-foreground">
-                    {typeof pricing.price === 'number' ? (pricing.price === 0 ? "" : "/month") : ""}
+                    {typeof pricing.price === 'number' ? (pricing.price === 0 ? (pricing.title === "Pay-as-you-go" ? "/AI response" : "") : "/month") : ""}
                   </div>
                 </div>
                 <hr className="w-4/5 m-auto mb-4" />
@@ -235,6 +210,8 @@ export const Pricing = () => {
                           ? "bg-gradient-to-r from-blue-800/80 to-blue-400/80 p-2 rounded-lg text-white flex-1" 
                           : benefit.includes("AI Responses Monthly")
                           ? "ml-2 font-semibold text-base text-blue-400 dark:text-blue-300"
+                          : benefit === "AI Setup & Maintenance" || benefit === "Custom Automations"
+                          ? "ml-2 font-semibold text-base text-blue-400 dark:text-blue-300"
                           : "ml-2"
                       }>
                         {benefit}
@@ -271,7 +248,7 @@ export const Pricing = () => {
           {/* Full AI Agent Setup */}
           <Card className="border border-gray-200 dark:border-gray-700">
             <CardHeader className="text-center">
-              <h3 className="text-2xl font-bold">Full AI Setup & Custom Automations</h3>
+              <h3 className="text-2xl font-bold">Custom Automations</h3>
             </CardHeader>
             <CardContent className="text-center">
               <div className="text-3xl font-bold text-blue-400 dark:text-blue-300 mb-2">
@@ -334,32 +311,26 @@ export const Pricing = () => {
                 <thead>
                   <tr className="border-b border-gray-200 dark:border-gray-700">
                     <th className="text-left py-4 px-4 font-semibold text-lg">Feature</th>
-                    <th className="text-center py-4 px-4 font-semibold text-lg">Free</th>
-                    <th className="text-center py-4 px-4 font-semibold text-lg">Standard</th>
-                    <th className="text-center py-4 px-4 font-semibold text-lg">Pro Support</th>
+                    <th className="text-center py-4 px-4 font-semibold text-lg">Pay-as-you-go</th>
+                    <th className="text-center py-4 px-4 font-semibold text-lg">Premium Support</th>
                     <th className="text-center py-4 px-4 font-semibold text-lg">Enterprise</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-gray-100 dark:border-gray-800">
-                    <td className="py-4 px-4 font-medium">AI Responses/Month</td>
-                    <td className="text-center py-4 px-4">100</td>
-                    <td className="text-center py-4 px-4">1,000</td>
-                    <td className="text-center py-4 px-4">5,000</td>
-                    <td className="text-center py-4 px-4">20,000</td>
+                    <td className="py-4 px-4 font-medium">AI Responses</td>
+                    <td className="text-center py-4 px-4">Pay per use</td>
+                    <td className="text-center py-4 px-4">5,000/month</td>
+                    <td className="text-center py-4 px-4">20,000/month</td>
                   </tr>
                   <tr className="border-b border-gray-100 dark:border-gray-800">
                     <td className="py-4 px-4 font-medium">Contacts</td>
-                    <td className="text-center py-4 px-4">100</td>
-                    <td className="text-center py-4 px-4">5,000</td>
-                    <td className="text-center py-4 px-4">10,000</td>
-                    <td className="text-center py-4 px-4">50,000</td>
+                    <td className="text-center py-4 px-4">Unlimited</td>
+                    <td className="text-center py-4 px-4">Unlimited</td>
+                    <td className="text-center py-4 px-4">Unlimited</td>
                   </tr>
                   <tr className="border-b border-gray-100 dark:border-gray-800">
                     <td className="py-4 px-4 font-medium">AI Systems</td>
-                    <td className="text-center py-4 px-4">
-                      <Check className="text-green-500 mx-auto" />
-                    </td>
                     <td className="text-center py-4 px-4">
                       <Check className="text-green-500 mx-auto" />
                     </td>
@@ -381,15 +352,9 @@ export const Pricing = () => {
                     <td className="text-center py-4 px-4">
                       <Check className="text-green-500 mx-auto" />
                     </td>
-                    <td className="text-center py-4 px-4">
-                      <Check className="text-green-500 mx-auto" />
-                    </td>
                   </tr>
                   <tr className="border-b border-gray-100 dark:border-gray-800">
-                    <td className="py-4 px-4 font-medium">Full Maintenance & Support</td>
-                    <td className="text-center py-4 px-4">
-                      <span className="text-red-500 text-2xl">×</span>
-                    </td>
+                    <td className="py-4 px-4 font-medium">AI Setup & Maintenance</td>
                     <td className="text-center py-4 px-4">
                       <span className="text-red-500 text-2xl">×</span>
                     </td>
@@ -402,9 +367,6 @@ export const Pricing = () => {
                   </tr>
                   <tr>
                     <td className="py-4 px-4 font-medium">Custom Automations</td>
-                    <td className="text-center py-4 px-4">
-                      <span className="text-red-500 text-2xl">×</span>
-                    </td>
                     <td className="text-center py-4 px-4">
                       <span className="text-red-500 text-2xl">×</span>
                     </td>
