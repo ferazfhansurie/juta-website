@@ -140,6 +140,15 @@ export const Pricing = () => {
            Offers
         </span>
       </h2>
+      <h3 className="text-3xl md:text-4xl font-bold text-center pb-8">
+        AI{' '}
+        <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
+          Agent
+        </span>
+      </h3>
+      <p className="text-center text-muted-foreground mb-8">
+        We provide complete AI agent automation services. Pay only for what you use or choose our monthly plans.
+      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {pricingList.map((pricing: PricingProps) => {
@@ -242,7 +251,7 @@ export const Pricing = () => {
         })}
       </div>
 
-            {/* Add-ons Section */}
+      {/* Add-ons Section */}
       <div className="mt-12 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Full AI Agent Setup */}
@@ -301,88 +310,353 @@ export const Pricing = () => {
         </div>
       </div>
 
-      {/* Plan Comparison Table */}
+      {/* Facebook/Instagram Ads Management Section */}
       <div className="mt-16 max-w-6xl mx-auto">
-        <h3 className="text-2xl font-bold text-center mb-8">Plan Comparison</h3>
-        <Card className="border border-gray-200 dark:border-gray-700">
-          <CardContent className="p-6">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-gray-200 dark:border-gray-700">
-                    <th className="text-left py-4 px-4 font-semibold text-lg">Feature</th>
-                    <th className="text-center py-4 px-4 font-semibold text-lg">Pay-as-you-go</th>
-                    <th className="text-center py-4 px-4 font-semibold text-lg">Premium Support</th>
-                    <th className="text-center py-4 px-4 font-semibold text-lg">Enterprise</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-gray-100 dark:border-gray-800">
-                    <td className="py-4 px-4 font-medium">AI Responses</td>
-                    <td className="text-center py-4 px-4">Pay per use</td>
-                    <td className="text-center py-4 px-4">5,000/month</td>
-                    <td className="text-center py-4 px-4">20,000/month</td>
-                  </tr>
-                  <tr className="border-b border-gray-100 dark:border-gray-800">
-                    <td className="py-4 px-4 font-medium">Contacts</td>
-                    <td className="text-center py-4 px-4">Unlimited</td>
-                    <td className="text-center py-4 px-4">Unlimited</td>
-                    <td className="text-center py-4 px-4">Unlimited</td>
-                  </tr>
-                  <tr className="border-b border-gray-100 dark:border-gray-800">
-                    <td className="py-4 px-4 font-medium">AI Systems</td>
-                    <td className="text-center py-4 px-4">
-                      <Check className="text-green-500 mx-auto" />
-                    </td>
-                    <td className="text-center py-4 px-4">
-                      <Check className="text-green-500 mx-auto" />
-                    </td>
-                    <td className="text-center py-4 px-4">
-                      <Check className="text-green-500 mx-auto" />
-                    </td>
-                  </tr>
-                  <tr className="border-b border-gray-100 dark:border-gray-800">
-                    <td className="py-4 px-4 font-medium">Mobile & Desktop Access</td>
-                    <td className="text-center py-4 px-4">
-                      <Check className="text-green-500 mx-auto" />
-                    </td>
-                    <td className="text-center py-4 px-4">
-                      <Check className="text-green-500 mx-auto" />
-                    </td>
-                    <td className="text-center py-4 px-4">
-                      <Check className="text-green-500 mx-auto" />
-                    </td>
-                  </tr>
-                  <tr className="border-b border-gray-100 dark:border-gray-800">
-                    <td className="py-4 px-4 font-medium">AI Setup & Maintenance</td>
-                    <td className="text-center py-4 px-4">
-                      <span className="text-red-500 text-2xl">×</span>
-                    </td>
-                    <td className="text-center py-4 px-4">
-                      <Check className="text-green-500 mx-auto" />
-                    </td>
-                    <td className="text-center py-4 px-4">
-                      <Check className="text-green-500 mx-auto" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="py-4 px-4 font-medium">Custom Automations</td>
-                    <td className="text-center py-4 px-4">
-                      <span className="text-red-500 text-2xl">×</span>
-                    </td>
-                    <td className="text-center py-4 px-4">
-                      <span className="text-red-500 text-2xl">×</span>
-                    </td>
-                    <td className="text-center py-4 px-4">
-                      <Check className="text-green-500 mx-auto" />
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+        <h2 className="text-3xl md:text-4xl font-bold text-center pb-8">
+          Facebook/Instagram{' '}
+          <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
+            Ads Management
+          </span>
+        </h2>
+        <p className="text-center text-muted-foreground mb-8">
+          We provide complete Facebook/Instagram ads management services. RM8-10 per lead.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Trial Ads Package */}
+          <Card className="border border-gray-200 dark:border-gray-700">
+            <CardHeader>
+              <div className="text-center mb-2">
+                <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  Trial
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-center mb-4">Trial</h3>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">RM 399</div>
+                <div className="text-muted-foreground">/14 days</div>
+              </div>
+              <CardDescription className="text-center">
+                Perfect for testing our ads management services
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>14 Days Service Period</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>2 Ad Campaigns</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>RM20-100 Daily Ad Budget</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Daily Ad Reports</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Copywriting Included</span>
+                </div>
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button className="w-full bg-transparent border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-500 transition-colors" asChild>
+                <a href="https://web.jutateknologi.com/register" target="_blank" rel="noopener noreferrer">
+                  Try Now
+                </a>
+              </Button>
+            </CardFooter>
+          </Card>
+
+          {/* Basic Ads Package */}
+          <Card className="border-2 border-primary drop-shadow-xl shadow-black/10 dark:shadow-white/10 scale-105">
+            <CardHeader>
+              <div className="text-center mb-2">
+                <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+                  Most Popular
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-center mb-4">Basic</h3>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">RM 699</div>
+                <div className="text-muted-foreground">/month</div>
+              </div>
+              <CardDescription className="text-center">
+                Perfect for small businesses starting with Facebook/Instagram ads
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>30 Days Service Period</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>2 Ad Campaigns</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>RM20-100 Daily Ad Budget</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Daily Ad Reports</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Copywriting Included</span>
+                </div>
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button className="w-full bg-transparent border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-500 transition-colors" asChild>
+                <a href="https://web.jutateknologi.com/register" target="_blank" rel="noopener noreferrer">
+                  Get Started
+                </a>
+              </Button>
+            </CardFooter>
+          </Card>
+
+          {/* Standard Ads Package */}
+          <Card className="border border-gray-200 dark:border-gray-700">
+            <CardHeader>
+              <h3 className="text-2xl font-bold text-center mb-4">Standard</h3>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">RM 2,000</div>
+                <div className="text-muted-foreground">/month</div>
+              </div>
+              <CardDescription className="text-center">
+                Best value for growing businesses with comprehensive ad management
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>30 Days Service Period</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Unlimited Ad Campaigns</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>RM20-1,000 Daily Ad Budget</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Daily Ad Reports</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Copywriting Included</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Poster Editing Included</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Video Editing Included</span>
+                </div>
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button className="w-full bg-transparent border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-500 transition-colors" asChild>
+                <a href="https://web.jutateknologi.com/register" target="_blank" rel="noopener noreferrer">
+                  Get Started
+                </a>
+              </Button>
+            </CardFooter>
+          </Card>
+
+          {/* Premium Ads Package */}
+          <Card className="border border-gray-200 dark:border-gray-700">
+            <CardHeader>
+              <h3 className="text-2xl font-bold text-center mb-4">Premium</h3>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">RM 3,500</div>
+                <div className="text-muted-foreground">/month</div>
+              </div>
+              <CardDescription className="text-center">
+                Complete solution for established businesses with unlimited potential
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>30 Days Service Period</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Unlimited Ad Campaigns</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>No-Limit Daily Ad Budget</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Daily Ad Reports</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Copywriting Included</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Poster Editing Included</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Video Editing Included</span>
+                </div>
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button className="w-full bg-transparent border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-500 transition-colors" asChild>
+                <a href="https://web.jutateknologi.com/register" target="_blank" rel="noopener noreferrer">
+                  Get Started
+                </a>
+              </Button>
+            </CardFooter>
+          </Card>
+        </div>
+      </div>
+
+      {/* Complete Solution Section */}
+      <div className="mt-16 max-w-4xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center pb-8">
+          Complete{' '}
+          <span className="bg-gradient-to-r from-blue-300 to-blue-700 text-transparent bg-clip-text">
+            Solution
+          </span>
+        </h2>
+        <p className="text-center text-muted-foreground mb-8">
+          Get both Facebook/Instagram ads management AND AI chatbot solution in one package
+        </p>
+        
+        <Card className="border-2 border-primary drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+          <CardHeader className="text-center">
+            <div className="text-center mb-2">
+              <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+                Best Value
+              </span>
+            </div>
+            <h3 className="text-3xl font-bold mb-4">Complete Digital Marketing Solution</h3>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-white mb-2">RM 1,500</div>
+              <div className="text-xl text-muted-foreground">/month</div>
+            </div>
+            <CardDescription className="text-lg">
+              Everything you need to grow your business online - ads management + AI agent automation
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Ads Management Features */}
+              <div>
+                <h4 className="text-xl font-semibold mb-4 text-blue-400 dark:text-blue-300">Facebook/Instagram Ads Management</h4>
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <Check className="text-green-500 mr-2" />
+                    <span>30 Days Service Period</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Check className="text-green-500 mr-2" />
+                    <span>2 Ad Campaigns</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Check className="text-green-500 mr-2" />
+                    <span>RM20-100 Daily Ad Budget</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Check className="text-green-500 mr-2" />
+                    <span>Daily Ad Reports</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Check className="text-green-500 mr-2" />
+                    <span>Professional Copywriting</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Check className="text-green-500 mr-2" />
+                    <span>Basic Poster Editing</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* AI Chatbot Features */}
+              <div>
+                <h4 className="text-xl font-semibold mb-4 text-blue-400 dark:text-blue-300">AI Agent Solution</h4>
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <Check className="text-green-500 mr-2" />
+                    <span>5,000 AI Responses Monthly</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Check className="text-green-500 mr-2" />
+                    <span>AI Follow-Up System</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Check className="text-green-500 mr-2" />
+                    <span>AI Booking System</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Check className="text-green-500 mr-2" />
+                    <span>AI Lead Qualification</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Check className="text-green-500 mr-2" />
+                    <span>Mobile & Desktop Access</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Check className="text-green-500 mr-2" />
+                    <span>Basic AI Setup & Maintenance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Additional Benefits */}
+            <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+              <h4 className="text-xl font-semibold mb-4 text-center">Additional Benefits</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Lead Generation: RM8-10 per qualified lead</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>24/7 Customer Support</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Monthly Performance Reports</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="text-green-500 mr-2" />
+                  <span>Strategy Consultation</span>
+                </div>
+              </div>
             </div>
           </CardContent>
+          <CardFooter>
+            <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+              <a href="https://web.jutateknologi.com/register" target="_blank" rel="noopener noreferrer">
+                Get Complete Solution
+              </a>
+            </Button>
+          </CardFooter>
         </Card>
       </div>
+
     </section>
   );
 };
